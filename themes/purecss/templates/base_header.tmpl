@@ -10,7 +10,8 @@
     <nav id="menu">
         <div class="pure-menu">
             <a class="pure-menu-heading" href="/">
-                    ${html_site_title()}
+                    ##${html_site_title()}
+                    ${blog_title}
             </a>
             ${html_translation_header()}
             ${html_navigation_links()}
@@ -40,33 +41,20 @@
 <%def name="html_navigation_links()">
     <ul class="pure-menu-list">
     ${html_navigation_links_entries(navigation_links)}
-    ${html_navigation_links_entries(navigation_alt_links)}
+    ##${html_navigation_links_entries(navigation_alt_links)}
     ${template_hooks['menu']()}
-    ${template_hooks['menu_alt']()}
+    ##${template_hooks['menu_alt']()}
     </ul>
 </%def>
 
 <%def name="html_navigation_links_entries(navigation_links_source)">
-    %for url, text in navigation_links_source[lang]:
-        % if isinstance(url, tuple):
-            <li> ${text}
-            <ul>
-            %for suburl, text in url:
-                % if rel_link(permalink, suburl) == "#":
-                    <li class="active"><a href="${permalink}">${text}<span class="sr-only"> ${messages("(active)", lang)}</span></a></li>
-                %else:
-                    <li><a href="${suburl}">${text}</a></li>
-                %endif
-            %endfor
-            </ul>
-        % else:
-            % if rel_link(permalink, url) == "#":
-                <li class="active"><a href="${permalink}">${text}<span class="sr-only"> ${messages("(active)", lang)}</span></a></li>
-            %else:
-                <li><a href="${url}">${text}</a></li>
-            %endif
-        % endif
-    %endfor
+    <ul class="pure-menu-list">
+          % for url, label in navigation_links[lang]:
+            <li class="pure-menu-item">
+              <a class="pure-menu-link" href="${url}">${label}</a>
+            </li>
+          % endfor
+    </ul>
 </%def>
 
 <%def name="html_translation_header()">
