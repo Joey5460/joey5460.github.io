@@ -95,14 +95,12 @@ p {
  * text and add some vertical space between the various pricing tables
  */
 @media(min-width: 767px) {
-
     .banner-head {
         font-size: 4em;
     }
     .pricing-table {
         margin-bottom: 0;
     }
-
 }
 
 /*
@@ -118,26 +116,26 @@ p {
     }
 }
 
-.yp-post__body > div > ul,
-.yp-post__body > div > p,
-.yp-post-group__body {
+.pc-post--body > div > ul,
+.pc-post--body > div > p,
+.pc-post-group--body {
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
 @media screen and (min-width: 48em){
-    .yp-post__body > div > p,
-    .yp-post__body > div > ul,
-    .yp-post-group__body  {
+    .pc-post--body > div > p,
+    .pc-post--body > div > ul,
+    .pc-post-group--body  {
         margin-left: 4rem;
         margin-right: 4rem;
     }
 }
 
 @media screen and (min-width: 64em){
-    .yp-post__body > div > p,
-    .yp-post__body > div > ul,
-    .yp-post-group__body {
+    .pc-post--body > div > p,
+    .pc-post--body > div > ul,
+    .pc-post-group--body {
         max-width: 800px;
         margin: auto;
     }
@@ -146,8 +144,8 @@ p {
 /* Images */
 
 /* figure container is only present when using figure directive */
-.yp-post__body > div > .figure,
-.yp-post__body > div > a.image-reference{
+.pc-post--body > div > .figure,
+.pc-post--body > div > a.image-reference{
     text-align: center;
     /* Remove margin for full-width images. */
     margin-left: 0;
