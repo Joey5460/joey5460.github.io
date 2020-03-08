@@ -1,7 +1,7 @@
 build:
 	nikola build
 run:
-	nikola serve --browser firefox
+	nikola serve --browser chromium-browser 
 
 deploy:
 	nikola github_deploy

@@ -19,8 +19,12 @@ ${template_hooks['extra_head']()}
                     <div class="content">
                         <%block name="content"></%block>
                     </div>
+                    <div class="footer">
+                        <p class="legal-copyright">
+                            ${footer.html_footer()}
+                        </p>
+                    </div>
                 </div>
-            ${footer.html_footer()}
         </div>
     </div>
     ${base.late_load_js()}
