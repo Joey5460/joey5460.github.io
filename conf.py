@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "zhouyu"  # (translatable)
-BLOG_TITLE = "fossytest"  # (translatable)
+BLOG_TITLE = "fossy"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://joey5460.github.io/"
@@ -25,7 +25,7 @@ SITE_URL = "https://joey5460.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://joey5460.github.io/"
 BLOG_EMAIL = "zhouyu5460@gmail.com"
-BLOG_DESCRIPTION = "lanyon-port-test"  # (translatable)
+BLOG_DESCRIPTION = "personal websit"  # (translatable)
 
 # Nikola is multilingual!
 #
