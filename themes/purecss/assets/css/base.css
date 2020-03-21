@@ -27,3 +27,41 @@ h1,
     margin-bottom: 0.495em;
 }
 
+.pc-header-title,
+.pc-header-title-overlay,
+.pc-header-subtitle,
+.pc-header-subtitle-overlay,
+.pc-index-post-title,
+.pc-index-post-subtitle{
+        font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+.pc-header-subtitle,
+.pc-header-subtitle-overlay{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc;
+
+    margin-top: 0;
+    padding: 0 1em;
+}
+
+.pc-header-subtitle-overlay{
+    color: #F0F0F0;
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 64em) {
+    .pc-header-title,
+    .pc-header-title-overlay {
+        font-size: 5rem;
+    }
+
+    .pc-header-subtitle,
+    .pc-header-subtitle-overlay {
+        font-size: 2.5rem;
+    }
+}
+
+

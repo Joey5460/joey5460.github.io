@@ -10,7 +10,9 @@
     <header>
         ${pheader.html_title()}
         ${pheader.html_translations(post)}
-        ${post.description()}
+         <h2 class="pc-header-subtitle">${post.description()}</h2>
+   
+        
     </header>
     <div class="e-content entry-content" itemprop="articleBody text">
     ##${post.text()}
