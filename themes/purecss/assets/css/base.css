@@ -52,6 +52,51 @@ h1,
     text-shadow: 1px 1px rgba(0,0,0,0.5);
 }
 
+.pc-index-post,
+.pc-index-meta {
+    margin-bottom: 3rem;
+}
+
+.pc-index-meta {
+    padding-right: 0.5rem;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #666;
+}
+.pc-index-post{
+    padding-left: 0.5rem;
+    border-left: 0.25rem solid #e7e7e7;
+    min-height: 3rem;
+}
+
+.pc-index-post-title{
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1em;
+}
+
+.pc-index-post-subtitle{
+    font-size: 1rem;
+    color: #999;
+    margin-top: 0.5rem;
+}
+
+.pc-index-post-link{
+    text-decoration: none;
+}
+
+.pc-index-post-body{
+    max-width: 800px;
+    margin-right: 1rem;
+}
+
+.pc-index-post-body .pc-well{
+    /* Full border, because index bodies are not full-width */
+    -webkit-box-shadow: inset 0 0 8px #696868;
+    box-shadow:        inset 0 0 8px #696868;
+}
+
 @media screen and (min-width: 64em) {
     .pc-header-title,
     .pc-header-title-overlay {
