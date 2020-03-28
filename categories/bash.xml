@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frog Jump (Posts about bash)</title><link>https://joey5460.github.io/</link><description></description><atom:link href="https://joey5460.github.io/categories/bash.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Mar 2020 13:10:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
+&lt;h2&gt;control&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;${variable}&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;$(command)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;variable:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;v2=${v::-4}
+echo "$v --&amp;gt; $v2"&lt;/pre&gt;
+&lt;p&gt;arguments&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$0 $1, $2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;return code&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/5130847/running-multiple-commands-in-one-line-in-shell"&gt;if-else&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;var0=0
+test $var0 -ge 1 &amp;amp;&amp;amp; echo 0 || echo 1&lt;/pre&gt;
+&lt;p&gt;multi commands in one line using ():&lt;/p&gt;
+&lt;pre class="literal-block"&gt;test "$1" = "us1" \
+&amp;amp;&amp;amp; (echo "****us1****" ; sslocal -c ~/apps.sh/ss-net-us1.json &amp;amp; ) \
+|| (test "$1" = "" \
+&amp;amp;&amp;amp; echo "****tky****" &amp;amp;&amp;amp; sslocal -c ~/apps.sh/ss-net.json &amp;amp;)&lt;/pre&gt;
+&lt;p&gt;loop:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;for f in *.rst
+do
+    echo $f
+done
+
+
+END=10
+for i in $(seq 1 $END)
+do
+    echo $i
+done
+
+v="some string.rtf"&lt;/pre&gt;
+&lt;p&gt;set -e Exit immediately if a command exits with a non-zero exit status.&lt;/p&gt;
+&lt;p&gt;cat files &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+&lt;a class="reference external" href="https://stackoverflow.com/questions/10508843/what-is-dev-null-21"&gt;https://stackoverflow.com/questions/10508843/what-is-dev-null-21&lt;/a&gt;
+CLI
+---
+- grep -r .
+- grep -i -r .
+- find . -name filename
+- find . -type f -exec chmod 655 {} - pkill processname
+- mkdir -p
+- chmod u+x file.sh
+- chmod g+r file.sh
+- chmod o+w file.sh
+- chown -R myuser:mygroup otherfiles
+- tree
+- pstree
+- uname -a
+- curl -T luca.zip ftp://119.81.148.101 --user lucadev:@f4stl4n3
+- iptables -I INPUT 5 -i wlp3s0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+- iptables -I INPUT -p tcp --dport 3030 -j ACCEPT &amp;amp;&amp;amp; sudo service iptables save
+- du -sh   ----- file/folder size
+- fdisk -l ----- check
+- sudo fdisk /dev/sdb --- if your USB is sdb ------ format&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://askubuntu.com/questions/832914/i-cant-format-my-live-usb-pendrive-udisks-error-quark-11"&gt;https://askubuntu.com/questions/832914/i-cant-format-my-live-usb-pendrive-udisks-error-quark-11&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.techwalla.com/articles/format-linux-disk"&gt;https://www.techwalla.com/articles/format-linux-disk&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;dnf&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;dnf autoremove //remove depedance&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;dnf config-manager --add-repo &lt;a class="reference external" href="https://dl.winehq.org/wine-builds/fedora/28/winehq.repo"&gt;https://dl.winehq.org/wine-builds/fedora/28/winehq.repo&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;dnf config-manager --set-disabled&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;dnf repolist&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ask.fedoraproject.org/en/question/97852/how-do-i-list-and-edit-repositories-in-fedora-25/"&gt;https://ask.fedoraproject.org/en/question/97852/how-do-i-list-and-edit-repositories-in-fedora-25/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre class="literal-block"&gt;cat /etc/*-release&lt;/pre&gt;
+&lt;p&gt;ssh key&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;ssh-copy-id &lt;a class="reference external" href="mailto:demo@198.51.100.0"&gt;demo@198.51.100.0&lt;/a&gt; ----- &lt;a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2"&gt;https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ssh-keygen -y -f mykey.pem &amp;gt; mykey.pub ------ generate a public key from a private key&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ssh-server"&gt;
+&lt;h2&gt;ssh server&lt;/h2&gt;
+&lt;p&gt;sudo dnf install ssh
+systemctl start sshd
+netstat -ant | grep 22&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="delete-symbolic-link-file"&gt;
+&lt;h2&gt;Delete Symbolic Link File&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;rm linkname&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;unlink linkname&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;sudo systemctl start docker
+sudo docker run hello-world
+&lt;a class="reference external" href="https://docs.docker.com/install/linux/docker-ce/fedora/"&gt;https://docs.docker.com/install/linux/docker-ce/fedora/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>bash</category><guid>https://joey5460.github.io/posts/bash/</guid><pubDate>Mon, 25 Mar 2019 15:22:38 GMT</pubDate></item></channel></rss>
