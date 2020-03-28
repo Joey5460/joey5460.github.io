@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "zhouyu"  # (translatable)
-BLOG_TITLE = "fossy"  # (translatable)
+BLOG_TITLE = "Frog Jump"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://joey5460.github.io/"
