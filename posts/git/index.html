@@ -8,6 +8,7 @@
 <link href="../../assets/css/rst_base.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
 <link href="../../assets/css/side-menu.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/pure.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/page.css" rel="stylesheet" type="text/css">
@@ -41,23 +42,26 @@ git push --force origin master
 gi'>
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-12-06T22:42:52-08:00">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div id="layout">
-        <div id="container">
-            
-    <header id="header"><a href="#menu" id="menuLink" class="menu-link">
+        <!-- <div id="container">-->
+                
+    <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
-        <span></span>
+        <span>
+        </span>
     </a>
-    <nav id="menu"><div class="pure-menu">
+    <div id="menu">
+        <div class="pure-menu">
             <a class="pure-menu-heading" href="../../">
                     Frog Jump
             </a>
             
 
             
-    <ul class="pure-menu-list"><ul class="pure-menu-list">
+    <ul class="pure-menu-list">
 <li class="pure-menu-item">
               <a class="pure-menu-link" href="../">Blog</a>
             </li>
@@ -70,29 +74,194 @@ gi'>
             <li class="pure-menu-item">
               <a class="pure-menu-link" href="../../rss.xml">RSS feed</a>
             </li>
-    </ul></ul>
+
+    
+    </ul>
 </div>
-    </nav></header><div id="main">
+    </div>
+
+                <div id="main">
+                
+    <div id="header">
+    
+    </div>
+
                     <div class="content">
                         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Git</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><!--<header>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="/posts/git/" class="u-url">Git</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
+                    <a class="u-url" href="/authors/zhouyu/">zhouyu</a>
             </span></p>
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2017-12-06T22:42:52-08:00" itemprop="datePublished" title="2017-12-06 22:42">2017-12-06 22:42</time></a>
+            <a href="/posts/git/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-12-06T22:42:52-08:00" itemprop="datePublished" title="2017-12-06 22:42">2017-12-06 22:42</time>
+            </a>
             </p>
             
-        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+        <p class="sourceline"><a href="/posts/git/index.rst" class="sourcelink">Source</a></p>
 
         </div>
         
 
-    </header><div class="e-content entry-content" itemprop="articleBody text">
-    
+    </header>
+    --><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="section" id="get-started">
+<h2>Get Started</h2>
+<p>git init : first time of using git</p>
+<p>git add .</p>
+<p>git ls-files</p>
+<p>git status</p>
+<p>git commit -am "message"</p>
+<p>git log</p>
+<p>git reset --hard</p>
+<dl class="simple">
+<dt>git push</dt>
+<dd><ul class="simple">
+<li><p>git push origin master</p></li>
+<li><p>git push --force origin master</p></li>
+</ul></dd>
+<dt>git branch</dt>
+<dd><ul class="simple">
+<li><p>git branch -v</p></li>
+<li><p>git branch -D</p></li>
+<li><p>git branch -d (safe if not merged)</p></li>
+</ul></dd>
+<dt>git checkout</dt>
+<dd><ul class="simple">
+<li><p>git checkout -b</p></li>
+</ul></dd>
+</dl>
+<p>git merge remote_branch_name</p>
+<p>git request-pull <a class="reference external" href="https://stackoverflow.com/questions/34945947/git-request-pull-how-to-create-a-github-pull-request-on-the-command-line">https://stackoverflow.com/questions/34945947/git-request-pull-how-to-create-a-github-pull-request-on-the-command-line</a></p>
+<p>gti rm filename</p>
+<p>git clean -f -d</p>
+<dl class="simple">
+<dt>git config --global user.name "zhouyu"</dt>
+<dd><ul class="simple">
+<li><p>git config --global user.email "<a class="reference external" href="mailto:zhouyu5460@gmail.com">zhouyu5460@gmail.com</a>"</p></li>
+</ul></dd>
+<dt>git clone</dt>
+<dd><ul class="simple">
+<li><p>git clone <a class="reference external" href="https://github.com/Joey5460/joey5460.github.io.git">https://github.com/Joey5460/joey5460.github.io.git</a></p></li>
+</ul></dd>
+<dt>git archive (<a class="reference external" href="https://stackoverflow.com/questions/160608/do-a-git-export-like-svn-export#163769">archive0</a>)</dt>
+<dd><ul class="simple">
+<li><p>git archive --format zip --output /full/path/to/zipfile.zip master</p></li>
+</ul></dd>
+</dl>
+</div>
+<div class="section" id="progressive">
+<h2>Progressive</h2>
+<dl class="simple">
+<dt>git config</dt>
+<dd><ul class="simple">
+<li><p>git config --list ------check</p></li>
+<li><p>.gitconfig ------config file</p></li>
+</ul></dd>
+</dl>
+<p>git add -u: update</p>
+<dl class="simple">
+<dt>git commit --amemd -m "message"</dt>
+<dd><ul class="simple">
+<li><p>git commit <a class="reference external" href="mailto:HEAD@%7B1">HEAD@{1</a>}  (<a class="reference external" href="http://stackoverflow.com/questions/6759791/how-do-i-move-forward-and-backward-between-commits-in-git">commit0</a>)</p></li>
+</ul></dd>
+</dl>
+<p>git push origin --delete &lt;branch_name&gt;</p>
+<dl class="simple">
+<dt>git checkout</dt>
+<dd><ul class="simple">
+<li><p>git checkout --patch branch_name path (<a class="reference external" href="https://stackoverflow.com/questions/18115411/how-to-merge-specific-files-from-git-branches#33168094">merge0</a>)</p></li>
+<li><p>git checkout branch_name file_path (<a class="reference external" href="https://stackoverflow.com/questions/18115411/how-to-merge-specific-files-from-git-branches#33168094">merge0</a>)</p></li>
+<li><p>git checkout HEAD -- my-file.txt (<a class="reference external" href="https://stackoverflow.com/questions/7147270/hard-reset-of-a-single-file#7147320">checkout0</a>)</p></li>
+<li><p>git checkout branch_name -- dirname (<a class="reference external" href="https://stackoverflow.com/questions/2668886/git-copy-all-files-in-a-directory-from-another-branch#2668947">checkout1</a>)</p></li>
+</ul></dd>
+<dt>git diff</dt>
+<dd><ul class="simple">
+<li><p>git diff 0da94be  59ff30c</p></li>
+<li><p>git diff branchA branchB -- file (<a class="reference external" href="https://stackoverflow.com/questions/4099742/how-to-compare-files-from-two-different-branches">diff0</a>)</p></li>
+<li><p>git diff --name-status master..yourBranchName (<a class="reference external" href="https://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-two-revisions#822859">diff1</a>)</p></li>
+</ul></dd>
+<dt>git apply</dt>
+<dd><ul class="simple">
+<li><p>git apply -3 patch.diff (<a class="reference external" href="https://stackoverflow.com/questions/15993861/git-create-patch-with-diff">apply0</a>)</p></li>
+</ul></dd>
+</dl>
+<dl class="simple">
+<dt>git tag tagname</dt>
+<dd><ul class="simple">
+<li><p>git tag --delete tagname</p></li>
+</ul></dd>
+<dt>git reset HEAD^/HEAD~1</dt>
+<dd><ul class="simple">
+<li><p>git reset --hard 59ff30c (<a class="reference external" href="https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit">reset0</a>)</p></li>
+</ul></dd>
+</dl>
+<p>git describe --abbrev=0 --tags (<a class="reference external" href="http://stackoverflow.com/questions/1404796/how-to-get-the-latest-tag-name-in-current-branch-in-git">describe0</a>)</p>
+<p>git config credential.helper store</p>
+<dl class="simple">
+<dt>git mergetool (<a class="reference external" href="https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git#163659">conflict0</a> <a class="reference external" href="http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/">conflict1</a> <a class="reference external" href="https://gist.github.com/karenyyng/f19ff75c60f18b4b8149">mergetool0</a>)</dt>
+<dd><ul class="simple">
+<li><p>:diffg RE  " get from REMOTE</p></li>
+<li><p>:diffg BA  " get from BASE</p></li>
+<li><p>:diffg LO  " get from LOCAL</p></li>
+<li><p>]c --- Jump to the next change.</p></li>
+<li><p>[c --- Jump to the previous change.</p></li>
+</ul></dd>
+</dl>
+<p>git init --bare (for center server)</p>
+<dl class="simple">
+<dt>git submodule</dt>
+<dd><ul class="simple">
+<li><p>git submodule init</p></li>
+<li><p>git submodule update</p></li>
+<li><p>git submodule add repo_url</p></li>
+</ul></dd>
+<dt>git remote</dt>
+<dd><ul class="simple">
+<li><p>git remote rename</p></li>
+<li><p>git remote remvoe</p></li>
+</ul></dd>
+<dt>git clone</dt>
+<dd><ul class="simple">
+<li><p>git clone  <a class="reference external" href="ssh://zhouyu5460@127.0.0.1:2222/~/ex4">ssh://zhouyu5460@127.0.0.1:2222/~/ex4</a> (<a class="reference external" href="https://stackoverflow.com/questions/5767850/git-on-custom-ssh-port#5767880">clone0</a>)</p></li>
+</ul></dd>
+</dl>
+<div class="section" id="more">
+<h3>More</h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>git <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery#Removing-Objects">filter-branch</a>  --index-filter </dt>
+<dd>
+<p>'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' --tag-name-filter cat -- --all</p>
+</dd>
+</dl></li>
+</ul>
+</div>
+<div class="section" id="delete">
+<h3>Delete</h3>
+<ul class="simple">
+<li><p>git push origin --delete &lt;branch_name&gt;</p></li>
+<li><p>git branch -D branch_name</p></li>
+</ul>
+</div>
+<div class="section" id="q-a">
+<h3>Q&amp;A：</h3>
+<p>Q: <a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit">How to remove file from historical commit</a>
+A:</p>
+<pre class="code text"><a name="rest_code_0aecec8e03724764bca760fd92a427ef-1"></a>git filter-branch --index-filter \
+<a name="rest_code_0aecec8e03724764bca760fd92a427ef-2"></a>    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+<a name="rest_code_0aecec8e03724764bca760fd92a427ef-3"></a>    --tag-name-filter cat -- --all
+</pre>
+<p>Q: <a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234">You can undo git add before commit with</a>
+A: git reset filename</p>
+</div>
+</div>
+</div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
@@ -111,7 +280,8 @@ gi'>
         </footer></p>
                     </div>
                 </div>
-        </div>
+        <!-- </div> -->
+        
     </div>
     
             <script src="../../assets/js/baguetteBox.min.js"></script><script src="../../assets/js/ui.js"></script><script>

@@ -8,6 +8,7 @@
 <link href="../../assets/css/rst_base.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
 <link href="../../assets/css/side-menu.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/pure.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/page.css" rel="stylesheet" type="text/css">
@@ -40,23 +41,26 @@ Kernel module example
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-11-08T07:12:56-08:00">
 <meta property="article:tag" content="kernel lkm">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div id="layout">
-        <div id="container">
-            
-    <header id="header"><a href="#menu" id="menuLink" class="menu-link">
+        <!-- <div id="container">-->
+                
+    <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
-        <span></span>
+        <span>
+        </span>
     </a>
-    <nav id="menu"><div class="pure-menu">
+    <div id="menu">
+        <div class="pure-menu">
             <a class="pure-menu-heading" href="../../">
                     Frog Jump
             </a>
             
 
             
-    <ul class="pure-menu-list"><ul class="pure-menu-list">
+    <ul class="pure-menu-list">
 <li class="pure-menu-item">
               <a class="pure-menu-link" href="../">Blog</a>
             </li>
@@ -69,29 +73,99 @@ Kernel module example
             <li class="pure-menu-item">
               <a class="pure-menu-link" href="../../rss.xml">RSS feed</a>
             </li>
-    </ul></ul>
+
+    
+    </ul>
 </div>
-    </nav></header><div id="main">
+    </div>
+
+                <div id="main">
+                
+    <div id="header">
+    
+    </div>
+
                     <div class="content">
                         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Loadable Kernel Module </a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><!--<header>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="/posts/lkm/" class="u-url">Loadable Kernel Module </a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
+                    <a class="u-url" href="/authors/zhouyu/">zhouyu</a>
             </span></p>
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-11-08T07:12:56-08:00" itemprop="datePublished" title="2018-11-08 07:12">2018-11-08 07:12</time></a>
+            <a href="/posts/lkm/" rel="bookmark">
+            <time class="published dt-published" datetime="2018-11-08T07:12:56-08:00" itemprop="datePublished" title="2018-11-08 07:12">2018-11-08 07:12</time>
+            </a>
             </p>
             
-        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+        <p class="sourceline"><a href="/posts/lkm/index.rst" class="sourcelink">Source</a></p>
 
         </div>
         
 
-    </header><div class="e-content entry-content" itemprop="articleBody text">
-    
+    </header>
+    --><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="section" id="lkm-loadable-kernel-module-programming">
+<h2>LKM(loadable kernel module) programming</h2>
+<dl>
+<dt>Reference:</dt>
+<dd><ul class="simple">
+<li><p><a class="reference external" href="https://gist.github.com/anryko/c8c8788ccf7d553a140a03aba22cab88">https://gist.github.com/anryko/c8c8788ccf7d553a140a03aba22cab88</a></p></li>
+</ul></dd>
+<dt>Install</dt>
+<dd><ul class="simple">
+<li><p>sudo dnf install kernel-devel</p></li>
+</ul></dd>
+<dt>Kernel module example</dt>
+<dd><pre class="code c"><a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-1"></a><span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;       // Needed by all modules</span><span class="cp"></span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-2"></a><span class="cp">#include</span> <span class="cpf">&lt;linux/kernel.h&gt;       // KERN_INFO</span><span class="cp"></span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-3"></a>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-4"></a><span class="kt">int</span> <span class="nf">init_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-5"></a><span class="p">{</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-6"></a>     <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"== Loading s2fs module ==</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-7"></a>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-8"></a>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-9"></a><span class="p">}</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-10"></a>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-11"></a><span class="kt">void</span> <span class="nf">cleanup_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-12"></a><span class="p">{</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-13"></a>     <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"== Exit s2fs module ==</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-14"></a><span class="p">}</span>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-15"></a>
+<a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-16"></a><span class="n">MODULE_LICENSE</span><span class="p">(</span><span class="s">"MIT"</span><span class="p">);</span>
+</pre></dd>
+<dt>Makefile</dt>
+<dd><pre class="code makefile"><a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-1"></a><span class="nv">obj-m</span> <span class="o">+=</span> lkm_test.o
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-2"></a><span class="nv">KDIR</span> <span class="o">?=</span> /lib/modules/<span class="k">$(</span>shell uname -r<span class="k">)</span>/build
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-3"></a>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-4"></a><span class="nf">all</span><span class="o">:</span>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-5"></a>        make -C <span class="k">$(</span>KDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> modules
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-6"></a>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-7"></a><span class="nf">clean</span><span class="o">:</span>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-8"></a>        make -C <span class="k">$(</span>KDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> clean
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-9"></a>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-10"></a><span class="nf">load</span><span class="o">:</span>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-11"></a>        sudo insmod lkm_test.ko
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-12"></a>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-13"></a><span class="nf">unload</span><span class="o">:</span>
+<a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-14"></a>        sudo rmmod lkm_test
+</pre></dd>
+<dt>Test</dt>
+<dd>
+<pre class="literal-block">dmesg -w
+make load</pre>
+</dd>
+<dt>command</dt>
+<dd><ul class="simple">
+<li><p>insmod</p></li>
+<li><p>rmmod</p></li>
+<li><p>lsmod</p></li>
+</ul></dd>
+</dl>
+</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/kernel-lkm/" rel="tag">kernel lkm</a></li>
@@ -113,7 +187,8 @@ Kernel module example
         </footer></p>
                     </div>
                 </div>
-        </div>
+        <!-- </div> -->
+        
     </div>
     
             <script src="../../assets/js/baguetteBox.min.js"></script><script src="../../assets/js/ui.js"></script><script>

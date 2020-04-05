@@ -8,6 +8,7 @@
 <link href="../assets/css/rst_base.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
 <link href="../assets/css/side-menu.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/pure.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/page.css" rel="stylesheet" type="text/css">
@@ -36,23 +37,26 @@ def hello(name='world'):
 if __name__ ==">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2012-12-15T10:16:20-03:00">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div id="layout">
-        <div id="container">
-            
-    <header id="header"><a href="#menu" id="menuLink" class="menu-link">
+        <!-- <div id="container">-->
+                
+    <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
-        <span></span>
+        <span>
+        </span>
     </a>
-    <nav id="menu"><div class="pure-menu">
+    <div id="menu">
+        <div class="pure-menu">
             <a class="pure-menu-heading" href="../">
                     Frog Jump
             </a>
             
 
             
-    <ul class="pure-menu-list"><ul class="pure-menu-list">
+    <ul class="pure-menu-list">
 <li class="pure-menu-item">
               <a class="pure-menu-link" href="../posts/">Blog</a>
             </li>
@@ -65,9 +69,18 @@ if __name__ ==">
             <li class="pure-menu-item">
               <a class="pure-menu-link" href="../rss.xml">RSS feed</a>
             </li>
-    </ul></ul>
+
+    
+    </ul>
 </div>
-    </nav></header><div id="main">
+    </div>
+
+                <div id="main">
+                
+    <div id="header">
+    
+    </div>
+
                     <div class="content">
                         
 <article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Listings Demo</a></h1>
@@ -84,18 +97,18 @@ if __name__ ==">
         <article class="pc-post--body"><div>
 <p>Nikola intends to let you show code easily via listings:</p>
 <p><a class="reference external" href="../listings/hello.py.html">hello.py</a>  <a class="reference external" href="../listings/hello.py">(Source)</a></p>
-<pre class="code python"><a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-1"></a><span class="ch">#!/usr/bin/python</span>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-2"></a>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-3"></a><span class="kn">import</span> <span class="nn">sys</span>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-4"></a>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-5"></a>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-6"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'world'</span><span class="p">):</span>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-7"></a>    <span class="n">greeting</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="o">+</span> <span class="n">name</span>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-9"></a>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-10"></a>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-11"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-<a name="rest_code_f428b8d4dc0c44c2abbf6ea4f66b9927-12"></a>    <span class="n">hello</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<pre class="code python"><a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-1"></a><span class="ch">#!/usr/bin/python</span>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-2"></a>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-3"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-4"></a>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-5"></a>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-6"></a><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'world'</span><span class="p">):</span>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-7"></a>    <span class="n">greeting</span> <span class="o">=</span> <span class="s2">"hello "</span> <span class="o">+</span> <span class="n">name</span>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-9"></a>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-10"></a>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-11"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<a name="rest_code_0b3b46a971d44172bd6638ad745a81c1-12"></a>    <span class="n">hello</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 </pre>
 </div>
         </article>
@@ -114,7 +127,8 @@ if __name__ ==">
         </footer></p>
                     </div>
                 </div>
-        </div>
+        <!-- </div> -->
+        
     </div>
     
             <script src="../assets/js/baguetteBox.min.js"></script><script src="../assets/js/ui.js"></script><script>

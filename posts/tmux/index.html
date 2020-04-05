@@ -8,6 +8,7 @@
 <link href="../../assets/css/rst_base.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
 <link href="../../assets/css/side-menu.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/pure.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/page.css" rel="stylesheet" type="text/css">
@@ -29,23 +30,26 @@ jump to a pane: ctrl+b q number
 Control+b [, Control+space, Alt+w, Control+b ] --- copy paste">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-09-04T03:35:26-08:00">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div id="layout">
-        <div id="container">
-            
-    <header id="header"><a href="#menu" id="menuLink" class="menu-link">
+        <!-- <div id="container">-->
+                
+    <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
-        <span></span>
+        <span>
+        </span>
     </a>
-    <nav id="menu"><div class="pure-menu">
+    <div id="menu">
+        <div class="pure-menu">
             <a class="pure-menu-heading" href="../../">
                     Frog Jump
             </a>
             
 
             
-    <ul class="pure-menu-list"><ul class="pure-menu-list">
+    <ul class="pure-menu-list">
 <li class="pure-menu-item">
               <a class="pure-menu-link" href="../">Blog</a>
             </li>
@@ -58,30 +62,48 @@ Control+b [, Control+space, Alt+w, Control+b ] --- copy paste">
             <li class="pure-menu-item">
               <a class="pure-menu-link" href="../../rss.xml">RSS feed</a>
             </li>
-    </ul></ul>
+
+    
+    </ul>
 </div>
-    </nav></header><div id="main">
+    </div>
+
+                <div id="main">
+                
+    <div id="header">
+    
+    </div>
+
                     <div class="content">
                         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Tmux</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><!--<header>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="/posts/tmux/" class="u-url">Tmux</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
+                    <a class="u-url" href="/authors/zhouyu/">zhouyu</a>
             </span></p>
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2017-09-04T03:35:26-08:00" itemprop="datePublished" title="2017-09-04 03:35">2017-09-04 03:35</time></a>
+            <a href="/posts/tmux/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-09-04T03:35:26-08:00" itemprop="datePublished" title="2017-09-04 03:35">2017-09-04 03:35</time>
+            </a>
             </p>
             
-        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+        <p class="sourceline"><a href="/posts/tmux/index.rst" class="sourcelink">Source</a></p>
 
         </div>
         
 
-    </header><div class="e-content entry-content" itemprop="articleBody text">
-    
-    </div>
+    </header>
+    --><div class="e-content entry-content" itemprop="articleBody text">
+    <ul class="simple">
+<li><p>split: ctrl+b %</p></li>
+<li><p>scroll: ctrl+b pagedown/pageup</p></li>
+<li><p>jump to a pane: ctrl+b q number</p></li>
+<li><p>Control+b [, Control+space, Alt+w, Control+b ] --- copy paste</p></li>
+</ul>
+</div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../welcome-to-nikola/" rel="prev" title="Welcome to Nikola">Previous post</a>
@@ -99,7 +121,8 @@ Control+b [, Control+space, Alt+w, Control+b ] --- copy paste">
         </footer></p>
                     </div>
                 </div>
-        </div>
+        <!-- </div> -->
+        
     </div>
     
             <script src="../../assets/js/baguetteBox.min.js"></script><script src="../../assets/js/ui.js"></script><script>

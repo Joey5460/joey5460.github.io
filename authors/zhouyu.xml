@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frog Jump (Posts by zhouyu)</title><link>https://joey5460.github.io/</link><description></description><atom:link href="https://joey5460.github.io/authors/zhouyu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Mar 2020 13:10:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frog Jump (Posts by zhouyu)</title><link>https://joey5460.github.io/</link><description></description><atom:link href="https://joey5460.github.io/authors/zhouyu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Sun, 29 Mar 2020 05:22:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
 &lt;h2&gt;control&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;${variable}&lt;/p&gt;&lt;/li&gt;
@@ -114,38 +114,38 @@ sudo docker run hello-world
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;dt&gt;Kernel module example&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-15"&gt;&lt;/a&gt;
-&lt;a name="rest_code_00ad49f92a534d398cba7e157f62db54-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Makefile&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_39348a88fe554634bcf4ae12ccb63938-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
+&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Test&lt;/dt&gt;
 &lt;dd&gt;&lt;pre class="literal-block"&gt;dmesg -w
@@ -4006,9 +4006,9 @@ make load&lt;/pre&gt;
 &lt;h3&gt;Q&amp;amp;A：&lt;/h3&gt;
 &lt;p&gt;Q: &lt;a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit"&gt;How to remove file from historical commit&lt;/a&gt;
 A:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_be93d937b7e249758640a5f1a9cf8d7a-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
-&lt;a name="rest_code_be93d937b7e249758640a5f1a9cf8d7a-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
-&lt;a name="rest_code_be93d937b7e249758640a5f1a9cf8d7a-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
+&lt;pre class="code text"&gt;&lt;a name="rest_code_0aecec8e03724764bca760fd92a427ef-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
+&lt;a name="rest_code_0aecec8e03724764bca760fd92a427ef-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+&lt;a name="rest_code_0aecec8e03724764bca760fd92a427ef-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
 &lt;/pre&gt;&lt;p&gt;Q: &lt;a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234"&gt;You can undo git add before commit with&lt;/a&gt;
 A: git reset filename&lt;/p&gt;
 &lt;/div&gt;
