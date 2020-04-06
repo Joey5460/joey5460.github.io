@@ -29,6 +29,16 @@
     <article class="h-entry post-${post.meta('type')}" itemscope="itemscope" itemtype="http://schema.org/Article">
     <header>
         <h1 class="p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h1>
+        <h6>
+          ${post.description()}
+        </h6>
+
+        <div class="pc-index-meta-tags">
+          % for tag in post.tags:
+            <span class="pc-index-meta-tag">${tag}</span>
+          % endfor
+        </div>
+
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
             % if author_pages_generated:
@@ -54,6 +64,7 @@
     %if index_teasers:
     <div class="p-summary entry-summary">
     ${post.text(teaser_only=True)}
+
     %else:
     <div class="e-content entry-content">
     ##${post.text(teaser_only=False)}
