@@ -1,4 +1,4 @@
-Sitemap: https://joey5460.github.io/sitemapindex.xml
+Sitemap: http://127.0.0.1:8000/sitemapindex.xml
 
 User-Agent: *
-Host: joey5460.github.io
+Host: 127.0.0.1:8000

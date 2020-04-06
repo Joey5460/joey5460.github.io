@@ -6,187 +6,187 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://joey5460.github.io/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/2012/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/2012/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/2017/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/2017/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/2018/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/2018/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/2019/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/2019/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/about-nikola/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/about-nikola/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/archive.html</loc>
-  <lastmod>2020-04-05T04:49:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/archive.html</loc>
+  <lastmod>2020-04-06T08:51:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/authors/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/authors/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/authors/roberto-alsina/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/authors/roberto-alsina/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/authors/zhouyu/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/authors/zhouyu/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/bootstrap-demo/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/bootstrap-demo/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/bash/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/bash/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/blog/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/blog/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/cat_nikola/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/cat_nikola/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/demo/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/demo/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/kernel-lkm/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/kernel-lkm/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/nikola/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/nikola/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/categories/python/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/categories/python/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/charts/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/charts/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/creating-a-theme/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/creating-a-theme/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/dr-nikolas-vendetta/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/dr-nikolas-vendetta/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/extending/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/extending/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/galleries/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/galleries/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/galleries/demo/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/galleries/demo/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/handbook/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/handbook/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/internals/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/internals/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/listings-demo/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/listings-demo/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/listings/</loc>
-  <lastmod>2020-03-29T05:21:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/listings/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/listings/__pycache__/</loc>
-  <lastmod>2020-03-29T05:21:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/listings/__pycache__/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/listings/hello.py.html</loc>
-  <lastmod>2020-04-05T04:49:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/listings/hello.py.html</loc>
+  <lastmod>2020-04-06T08:51:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/path-handlers/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/path-handlers/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/2kwords/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/2kwords/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/bash/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/bash/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/git/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/git/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/lkm/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/lkm/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/rst/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/rst/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/thai/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/thai/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/tmux/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/tmux/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/posts/welcome-to-nikola/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/posts/welcome-to-nikola/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/quickref/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/quickref/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/quickstart/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/quickstart/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/resume/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/resume/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/social_buttons/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/social_buttons/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
  <url>
-  <loc>https://joey5460.github.io/theming/</loc>
-  <lastmod>2020-03-29T05:22:00Z</lastmod>
+  <loc>http://127.0.0.1:8000/theming/</loc>
+  <lastmod>2020-04-06T04:46:00Z</lastmod>
  </url>
 </urlset>

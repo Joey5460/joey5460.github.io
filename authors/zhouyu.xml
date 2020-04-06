@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frog Jump (Posts by zhouyu)</title><link>https://joey5460.github.io/</link><description></description><atom:link href="https://joey5460.github.io/authors/zhouyu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Sun, 29 Mar 2020 05:22:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump (Posts by zhouyu)</title><link>http://127.0.0.1:8000/</link><description></description><atom:link href="http://127.0.0.1:8000/authors/zhouyu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 06 Apr 2020 08:02:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bash</title><link>http://127.0.0.1:8000/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
 &lt;h2&gt;control&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;${variable}&lt;/p&gt;&lt;/li&gt;
@@ -100,7 +100,7 @@ netstat -ant | grep 22&lt;/p&gt;
 &lt;p&gt;sudo systemctl start docker
 sudo docker run hello-world
 &lt;a class="reference external" href="https://docs.docker.com/install/linux/docker-ce/fedora/"&gt;https://docs.docker.com/install/linux/docker-ce/fedora/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>bash</category><guid>https://joey5460.github.io/posts/bash/</guid><pubDate>Mon, 25 Mar 2019 15:22:38 GMT</pubDate></item><item><title>Loadable Kernel Module </title><link>https://joey5460.github.io/posts/lkm/</link><dc:creator>zhouyu</dc:creator><description>&lt;div class="section" id="lkm-loadable-kernel-module-programming"&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>bash</category><guid>http://127.0.0.1:8000/posts/bash/</guid><pubDate>Mon, 25 Mar 2019 15:22:38 GMT</pubDate></item><item><title>Loadable Kernel Module </title><link>http://127.0.0.1:8000/posts/lkm/</link><dc:creator>zhouyu</dc:creator><description>&lt;div class="section" id="lkm-loadable-kernel-module-programming"&gt;
 &lt;h2&gt;LKM(loadable kernel module) programming&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;Reference:&lt;/dt&gt;
@@ -114,38 +114,38 @@ sudo docker run hello-world
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;dt&gt;Kernel module example&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-15"&gt;&lt;/a&gt;
-&lt;a name="rest_code_26144db6c0b647d2aedea645a9d93ed8-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Makefile&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_0d915a94761247c2ac6e38ed9cf5840f-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
+&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Test&lt;/dt&gt;
 &lt;dd&gt;&lt;pre class="literal-block"&gt;dmesg -w
@@ -159,7 +159,7 @@ make load&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;</description><category>kernel lkm</category><guid>https://joey5460.github.io/posts/lkm/</guid><pubDate>Thu, 08 Nov 2018 15:12:56 GMT</pubDate></item><item><title>2K Words</title><link>https://joey5460.github.io/posts/2kwords/</link><dc:creator>zhouyu</dc:creator><description>&lt;ol class="arabic"&gt;
+&lt;/div&gt;</description><category>kernel lkm</category><guid>http://127.0.0.1:8000/posts/lkm/</guid><pubDate>Thu, 08 Nov 2018 15:12:56 GMT</pubDate></item><item><title>2K Words</title><link>http://127.0.0.1:8000/posts/2kwords/</link><dc:creator>zhouyu</dc:creator><description>&lt;ol class="arabic"&gt;
 &lt;li&gt;&lt;pre class="literal-block"&gt;abroad          ●●● S2 W3 adverb&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;pre class="literal-block"&gt;accident        ●●● S2 W2 noun&lt;/pre&gt;
@@ -3846,7 +3846,7 @@ make load&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;pre class="literal-block"&gt;yourself        ●●● S1 W2 pronoun&lt;/pre&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description><guid>https://joey5460.github.io/posts/2kwords/</guid><pubDate>Sat, 19 May 2018 05:42:45 GMT</pubDate></item><item><title>Git</title><link>https://joey5460.github.io/posts/git/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="get-started"&gt;
+&lt;/ol&gt;</description><guid>http://127.0.0.1:8000/posts/2kwords/</guid><pubDate>Sat, 19 May 2018 05:42:45 GMT</pubDate></item><item><title>Git</title><link>http://127.0.0.1:8000/posts/git/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="get-started"&gt;
 &lt;h2&gt;Get Started&lt;/h2&gt;
 &lt;p&gt;git init : first time of using git&lt;/p&gt;
 &lt;p&gt;git add .&lt;/p&gt;
@@ -4006,14 +4006,14 @@ make load&lt;/pre&gt;
 &lt;h3&gt;Q&amp;amp;A：&lt;/h3&gt;
 &lt;p&gt;Q: &lt;a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit"&gt;How to remove file from historical commit&lt;/a&gt;
 A:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_0aecec8e03724764bca760fd92a427ef-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
-&lt;a name="rest_code_0aecec8e03724764bca760fd92a427ef-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
-&lt;a name="rest_code_0aecec8e03724764bca760fd92a427ef-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
+&lt;pre class="code text"&gt;&lt;a name="rest_code_5c13497da5944553819d060ea19da0fa-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
+&lt;a name="rest_code_5c13497da5944553819d060ea19da0fa-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+&lt;a name="rest_code_5c13497da5944553819d060ea19da0fa-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
 &lt;/pre&gt;&lt;p&gt;Q: &lt;a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234"&gt;You can undo git add before commit with&lt;/a&gt;
 A: git reset filename&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/git/</guid><pubDate>Thu, 07 Dec 2017 06:42:52 GMT</pubDate></item><item><title>小姐姐教泰语</title><link>https://joey5460.github.io/posts/thai/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;dl class="simple"&gt;
-&lt;dt&gt;&lt;a class="reference external" href="https://joey5460.github.io/images/kafang.jpg"&gt;&lt;img alt="xjj" src="https://joey5460.github.io/images/kafang.thumbnail.jpg"&gt;&lt;/a&gt;  &lt;a class="reference external" href="https://joey5460.github.io/images/xjj.png"&gt;&lt;img alt="apple" src="https://joey5460.github.io/images/xjj.thumbnail.png"&gt;&lt;/a&gt;&lt;/dt&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://127.0.0.1:8000/posts/git/</guid><pubDate>Thu, 07 Dec 2017 06:42:52 GMT</pubDate></item><item><title>小姐姐教泰语</title><link>http://127.0.0.1:8000/posts/thai/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;a class="reference external" href="http://127.0.0.1:8000/images/kafang.jpg"&gt;&lt;img alt="xjj" src="http://127.0.0.1:8000/images/kafang.thumbnail.jpg"&gt;&lt;/a&gt;  &lt;a class="reference external" href="http://127.0.0.1:8000/images/xjj.png"&gt;&lt;img alt="apple" src="http://127.0.0.1:8000/images/xjj.thumbnail.png"&gt;&lt;/a&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;ol class="arabic"&gt;
@@ -4021,7 +4021,7 @@ A: git reset filename&lt;/p&gt;
 &lt;dt&gt;ฟังเพลงจ้า&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/fangplingda.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/fangplingda.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('fangplingda')"&gt;
             Click to show/hide.
@@ -4037,7 +4037,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;/script&gt;
 
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/fangplingda1.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/fangplingda1.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('fangplingda1')"&gt;
             Click to show/hide.
@@ -4058,7 +4058,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ฉลาดจังเลย&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/calazanglui.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/calazanglui.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('calazanglui')"&gt;
             Click to show/hide.
@@ -4074,7 +4074,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;/script&gt;
 
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/calazanglui1.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/calazanglui1.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('calazanglui1')"&gt;
             Click to show/hide.
@@ -4095,7 +4095,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;แล้วพบกันใหม่&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/laioupoganmai.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/laioupoganmai.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('laioupoganmai')"&gt;
             Click to show/hide.
@@ -4116,7 +4116,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;คุณหล่อมากนะ&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/kunloumanman.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/kunloumanman.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('kunloumanman')"&gt;
             Click to show/hide.
@@ -4137,7 +4137,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ทำอะไรอยู่&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/tamalaiyou.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/tamalaiyou.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('tamalaiyou')"&gt;
             Click to show/hide.
@@ -4158,7 +4158,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;วันนี้ทำงานไหม&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/wannitamamai.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/wannitamamai.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('wannitamamai')"&gt;
             Click to show/hide.
@@ -4179,7 +4179,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ฉันเพิ่งตื่น&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/chanpendeng.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/chanpendeng.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('chanpendeng')"&gt;
             Click to show/hide.
@@ -4200,7 +4200,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ใช่/ใช่แล้ว&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/cai.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/cai.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('cai')"&gt;
             Click to show/hide.
@@ -4221,7 +4221,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;กินข้าวยัง&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/gin.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/gin.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('gin')"&gt;
             Click to show/hide.
@@ -4242,7 +4242,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;สู้ๆนะ&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/sosona.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/sosona.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('sosona')"&gt;
             Click to show/hide.
@@ -4263,7 +4263,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;เหนื่อย&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/nemai.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/nemai.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('nemai')"&gt;
             Click to show/hide.
@@ -4284,7 +4284,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;หนาวไหม&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/namai.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/namai.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('namai')"&gt;
             Click to show/hide.
@@ -4305,7 +4305,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ดีมากๆ&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/dimakmak.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/dimakmak.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('dimakmak')"&gt;
             Click to show/hide.
@@ -4326,7 +4326,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ฝันดีนะ&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/fanbi.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/fanbi.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('fanbi')"&gt;
             Click to show/hide.
@@ -4347,7 +4347,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dt&gt;ฉันกำลังจะนอนแล้ว&lt;/dt&gt;
 &lt;dd&gt;
 &lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/ganman_zainou_laiou.mp3"&gt;  
+   &lt;source src="http://127.0.0.1:8000/voice/ganman_zainou_laiou.mp3"&gt;  
 &lt;/source&gt;&lt;/audio&gt; 
 &lt;a href="javascript:showhide('ganman_zainou_laiou')"&gt;
             Click to show/hide.
@@ -4364,8 +4364,8 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/thai/</guid><pubDate>Sat, 07 Oct 2017 09:10:41 GMT</pubDate></item><item><title>ReStructuredText</title><link>https://joey5460.github.io/posts/rst/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduce"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id5"&gt;Introduce&lt;/a&gt;&lt;/h2&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><guid>http://127.0.0.1:8000/posts/thai/</guid><pubDate>Sat, 07 Oct 2017 09:10:41 GMT</pubDate></item><item><title>ReStructuredText</title><link>http://127.0.0.1:8000/posts/rst/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduce"&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id5"&gt;Introduce&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Some Rst tags are similar to Markdown. For example,&lt;/p&gt;
 &lt;pre class="literal-block"&gt;- , ==== , ----
 
@@ -4380,19 +4380,19 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;div class="contents topic" id="contents"&gt;
 &lt;p class="topic-title"&gt;Contents&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#introduce" id="id5"&gt;Introduce&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#block" id="id6"&gt;Block&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#sections" id="id7"&gt;Sections&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#inline-markup" id="id8"&gt;Inline Markup&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#footnotes" id="id9"&gt;Footnotes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#hyperlinks" id="id10"&gt;Hyperlinks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#math" id="id11"&gt;Math&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#table" id="id12"&gt;Table&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#introduce" id="id5"&gt;Introduce&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#block" id="id6"&gt;Block&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#sections" id="id7"&gt;Sections&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#inline-markup" id="id8"&gt;Inline Markup&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#footnotes" id="id9"&gt;Footnotes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#hyperlinks" id="id10"&gt;Hyperlinks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#math" id="id11"&gt;Math&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="http://127.0.0.1:8000/posts/rst/#table" id="id12"&gt;Table&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="block"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id6"&gt;Block&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id6"&gt;Block&lt;/a&gt;&lt;/h2&gt;
 &lt;pre class="literal-block"&gt;a block example::
 
     This is an example for block&lt;/pre&gt;
@@ -4403,7 +4403,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="sections"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id7"&gt;Sections&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id7"&gt;Sections&lt;/a&gt;&lt;/h2&gt;
 &lt;pre class="literal-block"&gt;Chapter 1
 ==========
 
@@ -4414,7 +4414,7 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 ~~~~~&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="inline-markup"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id8"&gt;Inline Markup&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id8"&gt;Inline Markup&lt;/a&gt;&lt;/h2&gt;
 &lt;pre class="literal-block"&gt;- **bold**
 
 + *I*
@@ -4439,16 +4439,16 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="footnotes"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id9"&gt;Footnotes&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;reference: &lt;a class="footnote-reference brackets" href="https://joey5460.github.io/posts/rst/#id3" id="id1"&gt;1&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id9"&gt;Footnotes&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;reference: &lt;a class="footnote-reference brackets" href="http://127.0.0.1:8000/posts/rst/#id3" id="id1"&gt;1&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="hyperlinks"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id10"&gt;Hyperlinks&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id10"&gt;Hyperlinks&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://joey5460.github.com"&gt;a link to my website&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.com"&gt;website&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="math"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id11"&gt;Math&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id11"&gt;Math&lt;/a&gt;&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;build-in math&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -4458,11 +4458,11 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 \end{equation*}
 &lt;/div&gt;
 &lt;ol class="arabic simple" start="2"&gt;
-&lt;li&gt;&lt;p&gt;this is inline math &lt;a class="footnote-reference brackets" href="https://joey5460.github.io/posts/rst/#id4" id="id2"&gt;2&lt;/a&gt; &lt;span class="math"&gt;\(\frac{ \sum_{t=0}^{N}f(t,k) }{N}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;this is inline math &lt;a class="footnote-reference brackets" href="http://127.0.0.1:8000/posts/rst/#id4" id="id2"&gt;2&lt;/a&gt; &lt;span class="math"&gt;\(\frac{ \sum_{t=0}^{N}f(t,k) }{N}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="table"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id12"&gt;Table&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a class="toc-backref" href="http://127.0.0.1:8000/posts/rst/#id12"&gt;Table&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Beatiful table&lt;/p&gt;
 &lt;table&gt;
 &lt;colgroup&gt;
@@ -4552,16 +4552,16 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;dl class="footnote brackets"&gt;
-&lt;dt class="label" id="id3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="https://joey5460.github.io/posts/rst/#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dt class="label" id="id3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="http://127.0.0.1:8000/posts/rst/#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="https://joey5460.github.io/posts/rst/#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="http://127.0.0.1:8000/posts/rst/#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/3610551/math-in-restructuredtext-with-latex#11226398"&gt;https://stackoverflow.com/questions/3610551/math-in-restructuredtext-with-latex#11226398&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/rst/</guid><pubDate>Thu, 07 Sep 2017 07:15:44 GMT</pubDate></item><item><title>Tmux</title><link>https://joey5460.github.io/posts/tmux/</link><dc:creator>zhouyu</dc:creator><description>&lt;ul class="simple"&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://127.0.0.1:8000/posts/rst/</guid><pubDate>Thu, 07 Sep 2017 07:15:44 GMT</pubDate></item><item><title>Tmux</title><link>http://127.0.0.1:8000/posts/tmux/</link><dc:creator>zhouyu</dc:creator><description>&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;split: ctrl+b %&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;scroll: ctrl+b pagedown/pageup&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;jump to a pane: ctrl+b q number&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Control+b [, Control+space, Alt+w, Control+b ] --- copy paste&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><guid>https://joey5460.github.io/posts/tmux/</guid><pubDate>Mon, 04 Sep 2017 11:35:26 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><guid>http://127.0.0.1:8000/posts/tmux/</guid><pubDate>Mon, 04 Sep 2017 11:35:26 GMT</pubDate></item></channel></rss>
