@@ -6,55 +6,55 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://127.0.0.1:8000/authors/roberto-alsina.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/authors/roberto-alsina.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/authors/zhouyu.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/authors/zhouyu.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/bash.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/bash.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/blog.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/blog.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/cat_nikola.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/cat_nikola.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/demo.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/demo.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/kernel-lkm.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/kernel-lkm.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/nikola.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/nikola.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/categories/python.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/categories/python.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/galleries/demo/rss.xml</loc>
-  <lastmod>2020-04-06T08:51:00Z</lastmod>
+  <loc>https://joey5460.github.io/galleries/demo/rss.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/galleries/rss.xml</loc>
-  <lastmod>2020-04-06T08:51:00Z</lastmod>
+  <loc>https://joey5460.github.io/galleries/rss.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/rss.xml</loc>
-  <lastmod>2020-04-06T08:02:00Z</lastmod>
+  <loc>https://joey5460.github.io/rss.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://127.0.0.1:8000/sitemap.xml</loc>
-  <lastmod>2020-04-06T08:51:00Z</lastmod>
+  <loc>https://joey5460.github.io/sitemap.xml</loc>
+  <lastmod>2020-04-06T08:53:00Z</lastmod>
  </sitemap>
 </sitemapindex>
