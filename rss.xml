@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 06 Apr 2020 08:53:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 12:27:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Qt Test</title><link>https://joey5460.github.io/posts/qt-test/</link><dc:creator>zhouyu</dc:creator><description>&lt;pre class="code text"&gt;&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-1"&gt;&lt;/a&gt;class TestDemo: public QObject
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-2"&gt;&lt;/a&gt;{
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-3"&gt;&lt;/a&gt;    public Q_SLOTS:
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-4"&gt;&lt;/a&gt;        void startTest()
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-5"&gt;&lt;/a&gt;        {
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-6"&gt;&lt;/a&gt;            QTest::qExec(this)
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-7"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-8"&gt;&lt;/a&gt;    private Q_SLOTS:
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-9"&gt;&lt;/a&gt;        void test1()
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-10"&gt;&lt;/a&gt;        {
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-11"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-13"&gt;&lt;/a&gt;}
+&lt;/pre&gt;</description><category>qt</category><guid>https://joey5460.github.io/posts/qt-test/</guid><pubDate>Tue, 21 Apr 2020 16:07:52 GMT</pubDate></item><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
 &lt;h2&gt;control&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;${variable}&lt;/p&gt;&lt;/li&gt;
@@ -114,38 +127,38 @@ sudo docker run hello-world
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;dt&gt;Kernel module example&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-15"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ab5f7bc0cc7c4aa6ae116b65324243e7-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Makefile&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_3ddce19abcba47cd9411d7f6c542fedc-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
+&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Test&lt;/dt&gt;
 &lt;dd&gt;&lt;pre class="literal-block"&gt;dmesg -w
@@ -4006,9 +4019,9 @@ make load&lt;/pre&gt;
 &lt;h3&gt;Q&amp;amp;A：&lt;/h3&gt;
 &lt;p&gt;Q: &lt;a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit"&gt;How to remove file from historical commit&lt;/a&gt;
 A:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_5c13497da5944553819d060ea19da0fa-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
-&lt;a name="rest_code_5c13497da5944553819d060ea19da0fa-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
-&lt;a name="rest_code_5c13497da5944553819d060ea19da0fa-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
+&lt;pre class="code text"&gt;&lt;a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
+&lt;a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+&lt;a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
 &lt;/pre&gt;&lt;p&gt;Q: &lt;a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234"&gt;You can undo git add before commit with&lt;/a&gt;
 A: git reset filename&lt;/p&gt;
 &lt;/div&gt;
@@ -4577,4 +4590,8 @@ and build a site using it. Congratulations!&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/listings-demo/"&gt;See a demo listing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/dr-nikolas-vendetta/"&gt;See a demo of a longer text&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Send feedback to &lt;a class="reference external" href="mailto:info@getnikola.com"&gt;info@getnikola.com&lt;/a&gt;!&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>demo</category><category>nikola</category><category>python</category><guid>https://joey5460.github.io/posts/welcome-to-nikola/</guid><pubDate>Sat, 31 Mar 2012 02:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Send feedback to &lt;a class="reference external" href="mailto:info@getnikola.com"&gt;info@getnikola.com&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Commands:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;nikola new_post -2&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>blog</category><category>demo</category><category>nikola</category><category>python</category><guid>https://joey5460.github.io/posts/welcome-to-nikola/</guid><pubDate>Sat, 31 Mar 2012 02:00:00 GMT</pubDate></item></channel></rss>

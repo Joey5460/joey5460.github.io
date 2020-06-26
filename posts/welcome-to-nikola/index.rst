@@ -24,3 +24,8 @@ Next steps:
 * :doc:`See a demo of a longer text <dr-nikolas-vendetta>`
 
 Send feedback to info@getnikola.com!
+
+Commands:
+
+- nikola new_post -2
+

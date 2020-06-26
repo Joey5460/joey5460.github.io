@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Welcome to Nikola | FrogFrogJump</title>
+<title>Qt Test | FrogFrogJump</title>
 <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
@@ -17,25 +17,28 @@
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://joey5460.github.io/posts/welcome-to-nikola/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Roberto Alsina">
-<link rel="next" href="../tmux/" title="Tmux" type="text/html">
+<link rel="canonical" href="https://joey5460.github.io/posts/qt-test/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="zhouyu">
+<link rel="prev" href="../bash/" title="Bash" type="text/html">
 <meta property="og:site_name" content="FrogFrogJump">
-<meta property="og:title" content="Welcome to Nikola">
-<meta property="og:url" content="https://joey5460.github.io/posts/welcome-to-nikola/">
-<meta property="og:description" content="If you can see this in a web browser, it means you managed to install Nikola,
-and build a site using it. Congratulations!
-Next steps:
+<meta property="og:title" content="Qt Test">
+<meta property="og:url" content="https://joey5460.github.io/posts/qt-test/">
+<meta property="og:description" content="class TestDemo: public QObject
+{
+    public Q_SLOTS:
+        void startTest()
+        {
+            QTest::qExec(this)
+        }
+    private Q_SLOTS:
+        void test1()
+        {
+        }
 
-Read the manual
-Visit the Nikola website to learn more
-See a demo">
+}">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2012-03-30T23:00:00-03:00">
-<meta property="article:tag" content="blog">
-<meta property="article:tag" content="demo">
-<meta property="article:tag" content="nikola">
-<meta property="article:tag" content="python">
+<meta property="article:published_time" content="2020-04-22T00:07:52+08:00">
+<meta property="article:tag" content="qt">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -89,54 +92,44 @@ navbar-dark bg-dark
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Welcome to Nikola</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Qt Test</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/roberto-alsina/">Roberto Alsina</a>
+                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2012-03-30T23:00:00-03:00" itemprop="datePublished" title="2012-03-30 23:00">2012-03-30 23:00</time></a>
+            <time class="published dt-published" datetime="2020-04-22T00:07:52+08:00" itemprop="datePublished" title="2020-04-22 00:07">2020-04-22 00:07</time></a>
             </p>
             
         <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
 
-                    <p class="linkline"><a href="https://getnikola.com/">Original site</a></p>
         </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<div class="figure">
-<a class="reference external image-reference" href="https://farm1.staticflickr.com/138/352972944_4f9d568680_z.jpg?zz=1"><img alt="Nikola Tesla Corner by nicwest, on Flickr" class="thumbnail" src="https://farm1.staticflickr.com/138/352972944_4f9d568680.jpg"></a>
-</div>
-<p>If you can see this in a web browser, it means you managed to install Nikola,
-and build a site using it. Congratulations!</p>
-<p>Next steps:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="../../handbook/">Read the manual</a></p></li>
-<li><p><a class="reference external" href="https://getnikola.com">Visit the Nikola website to learn more</a></p></li>
-<li><p><a class="reference external" href="../../galleries/demo/">See a demo photo gallery</a></p></li>
-<li><p><a class="reference external" href="../../listings-demo/">See a demo listing</a></p></li>
-<li><p><a class="reference external" href="../../dr-nikolas-vendetta/">See a demo of a longer text</a></p></li>
-</ul>
-<p>Send feedback to <a class="reference external" href="mailto:info@getnikola.com">info@getnikola.com</a>!</p>
-<p>Commands:</p>
-<ul class="simple">
-<li><p>nikola new_post -2</p></li>
-</ul>
-</div>
+    <pre class="code text"><a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-1"></a>class TestDemo: public QObject
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-2"></a>{
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-3"></a>    public Q_SLOTS:
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-4"></a>        void startTest()
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-5"></a>        {
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-6"></a>            QTest::qExec(this)
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-7"></a>        }
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-8"></a>    private Q_SLOTS:
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-9"></a>        void test1()
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-10"></a>        {
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-11"></a>        }
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-12"></a>
+<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-13"></a>}
+</pre>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/blog/" rel="tag">blog</a></li>
-            <li><a class="tag p-category" href="../../categories/demo/" rel="tag">demo</a></li>
-            <li><a class="tag p-category" href="../../categories/nikola/" rel="tag">nikola</a></li>
-            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
+<li><a class="tag p-category" href="../../categories/qt/" rel="tag">qt</a></li>
         </ul>
 <ul class="pager hidden-print">
-<li class="next">
-                <a href="../tmux/" rel="next" title="Tmux">Next post</a>
+<li class="previous">
+                <a href="../bash/" rel="prev" title="Bash">Previous post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
