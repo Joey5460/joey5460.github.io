@@ -26,9 +26,14 @@ theme:
 	nikola theme -n purecss --parent bootstrap4 --engine mako
 
 install:
-	virtualenv -p $(which python3) envname
 	pip install nikola
 	pip install ghp-import2
 	pip install typogrify
 	pip install pygal
 	pip install pyphen
+
+virutalenv:
+	pip install --user virtualenv
+	virtualenv -p $$(which python3) ~/website
+
+
