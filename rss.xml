@@ -1,17 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 12:27:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Qt Test</title><link>https://joey5460.github.io/posts/qt-test/</link><dc:creator>zhouyu</dc:creator><description>&lt;pre class="code text"&gt;&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-1"&gt;&lt;/a&gt;class TestDemo: public QObject
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-2"&gt;&lt;/a&gt;{
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-3"&gt;&lt;/a&gt;    public Q_SLOTS:
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-4"&gt;&lt;/a&gt;        void startTest()
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-5"&gt;&lt;/a&gt;        {
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-6"&gt;&lt;/a&gt;            QTest::qExec(this)
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-7"&gt;&lt;/a&gt;        }
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-8"&gt;&lt;/a&gt;    private Q_SLOTS:
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-9"&gt;&lt;/a&gt;        void test1()
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-10"&gt;&lt;/a&gt;        {
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-11"&gt;&lt;/a&gt;        }
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-13"&gt;&lt;/a&gt;}
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Sep 2020 09:00:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>qdoc note</title><link>https://joey5460.github.io/posts/qdoctut/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="usage"&gt;
+&lt;h2&gt;Usage&lt;/h2&gt;
+&lt;p&gt;run "qdoc yourconf.qdocconf"&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="required"&gt;
+&lt;h2&gt;Required&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;qdoc binary&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;.qdoc&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;.qdocconf&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tips"&gt;
+&lt;h2&gt;Tips&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/12-0-qdoc-commands-miscellaneous.html"&gt;https://doc.qt.io/qt-5/12-0-qdoc-commands-miscellaneous.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;/meta {X} not dispaly&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/qdoctut/</guid><pubDate>Sun, 20 Sep 2020 08:22:33 GMT</pubDate></item><item><title>Qml</title><link>https://joey5460.github.io/posts/qml/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="qmake-pro-file"&gt;
+&lt;h2&gt;qmake pro file&lt;/h2&gt;
+&lt;p&gt;-LIBS += -ltoxcore -ltoxencryptsave
+-LIBS += -L/usr/local/lib -lmath
+-INSTALLS += target qmldir
+-TEMPLATE = app
+-TEMPLATE = lib&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="specify-platform"&gt;
+&lt;h2&gt;specify platform&lt;/h2&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-1"&gt;&lt;/a&gt;linux:!android {
+&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-2"&gt;&lt;/a&gt;    message("* Using settings for Unix/Linux.")
+&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-3"&gt;&lt;/a&gt;    LIBS += -L/path/to/linux/libs
+&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-4"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/18104716/how-to-specify-libraries-only-for-android-platform-build-in-pro-file"&gt;https://stackoverflow.com/questions/18104716/how-to-specify-libraries-only-for-android-platform-build-in-pro-file&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="extending-with-android"&gt;
+&lt;h2&gt;Extending with android&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qandroidjniobject.html"&gt;https://doc.qt.io/qt-5/qandroidjniobject.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When importing a module called “org.example.io”, the QML engine will look in one of the import paths and tries to locate the “org/example/io” path with a qmldir.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="web-assembly"&gt;
+&lt;h2&gt;Web Assembly&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/59545455/web-assembly-typeerror-networkerror-when-attempting-to-fetch-resource"&gt;https://stackoverflow.com/questions/59545455/web-assembly-typeerror-networkerror-when-attempting-to-fetch-resource&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;emrun --no_browser --port 8080 .&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-1"&gt;&lt;/a&gt;Page {
+&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-2"&gt;&lt;/a&gt;    id: root
+&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-3"&gt;&lt;/a&gt;    property string inConversationWith
+&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-4"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="debug"&gt;
+&lt;h2&gt;Debug&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qtquick-debugging.html"&gt;https://doc.qt.io/qt-5/qtquick-debugging.html&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_781583115550469f8cee2a860ada6f7f-1"&gt;&lt;/a&gt;function f(a, b) {
+&lt;a name="rest_code_781583115550469f8cee2a860ada6f7f-2"&gt;&lt;/a&gt;  console.log("a is ", a, "b is ", b);
+&lt;a name="rest_code_781583115550469f8cee2a860ada6f7f-3"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="connect"&gt;
+&lt;h2&gt;connect&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://felgo.com/doc/felgo-qml-communication-basics/"&gt;https://felgo.com/doc/felgo-qml-communication-basics/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://forum.qt.io/topic/99556/communication-between-qml-objects"&gt;https://forum.qt.io/topic/99556/communication-between-qml-objects&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="element"&gt;
+&lt;h2&gt;Element&lt;/h2&gt;
+&lt;p&gt;AppliationWindow
+Page
+Header
+Label&lt;/p&gt;
+&lt;p&gt;anchors.fill: parent
+layout&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/qml/</guid><pubDate>Sun, 30 Aug 2020 15:33:31 GMT</pubDate></item><item><title>qml plugin</title><link>https://joey5460.github.io/posts/qml-plugin/</link><dc:creator>zhouyu</dc:creator><description>&lt;div class="section" id="step-1"&gt;
+&lt;h2&gt;step 1&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/listings/qmlplugin/cpp/fileio.h.html"&gt;qmlplugin/cpp/fileio.h&lt;/a&gt;  &lt;a class="reference external" href="https://joey5460.github.io/listings/qmlplugin/cpp/fileio.h"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+class FileIO : public QObject {
+    Q_OBJECT
+    Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
+    Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
+public:
+    FileIO(QObject *parent = 0);
+    ~FileIO();
+
+    Q_INVOKABLE void read();
+    Q_INVOKABLE void write();
+    QUrl source() const;
+    QString text() const;
+public slots:
+    void setSource(QUrl source);
+    void setText(QString text);
+
+signals:
+    void sourceChanged(QUrl arg);
+    void textChanged(QString arg);
+
+private:
+    QUrl m_source;
+    QString m_text;
+};
+&lt;/pre&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_faf91a17a7954042a4b17288a23f3433-1"&gt;&lt;/a&gt;qmlRegisterType&amp;lt;FileIO&amp;gt;(uri, 1, 0, "FileIO");
+&lt;/pre&gt;&lt;p&gt;FileIO with &amp;lt;&amp;gt; is our class name. FileIO with "" is our element name used in qml&lt;/p&gt;
+&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/qml-plugin/</guid><pubDate>Sun, 26 Jul 2020 12:00:41 GMT</pubDate></item><item><title>Qt Test</title><link>https://joey5460.github.io/posts/qt-test/</link><dc:creator>zhouyu</dc:creator><description>&lt;pre class="code text"&gt;&lt;a name="rest_code_a5b882e862a64905887d92633f140630-1"&gt;&lt;/a&gt;class TestDemo: public QObject
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-2"&gt;&lt;/a&gt;{
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-3"&gt;&lt;/a&gt;    public Q_SLOTS:
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-4"&gt;&lt;/a&gt;        void startTest()
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-5"&gt;&lt;/a&gt;        {
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-6"&gt;&lt;/a&gt;            QTest::qExec(this)
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-7"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-8"&gt;&lt;/a&gt;    private Q_SLOTS:
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-9"&gt;&lt;/a&gt;        void test1()
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-10"&gt;&lt;/a&gt;        {
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-11"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_a5b882e862a64905887d92633f140630-13"&gt;&lt;/a&gt;}
 &lt;/pre&gt;</description><category>qt</category><guid>https://joey5460.github.io/posts/qt-test/</guid><pubDate>Tue, 21 Apr 2020 16:07:52 GMT</pubDate></item><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
 &lt;h2&gt;control&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -127,38 +224,38 @@ sudo docker run hello-world
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;dt&gt;Kernel module example&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-15"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f220210cebc5466788b8ec4ad4d1270f-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Makefile&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_ea3e29be14514ea584e68241584b0b5b-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
+&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Test&lt;/dt&gt;
 &lt;dd&gt;&lt;pre class="literal-block"&gt;dmesg -w
@@ -4019,9 +4116,9 @@ make load&lt;/pre&gt;
 &lt;h3&gt;Q&amp;amp;A：&lt;/h3&gt;
 &lt;p&gt;Q: &lt;a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit"&gt;How to remove file from historical commit&lt;/a&gt;
 A:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
-&lt;a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
-&lt;a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
+&lt;pre class="code text"&gt;&lt;a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
+&lt;a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+&lt;a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
 &lt;/pre&gt;&lt;p&gt;Q: &lt;a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234"&gt;You can undo git add before commit with&lt;/a&gt;
 A: git reset filename&lt;/p&gt;
 &lt;/div&gt;
@@ -4572,26 +4669,4 @@ event.style.display = (event.style.display == 'block') ? 'none' : 'block';
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/3610551/math-in-restructuredtext-with-latex#11226398"&gt;https://stackoverflow.com/questions/3610551/math-in-restructuredtext-with-latex#11226398&lt;/a&gt;&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/rst/</guid><pubDate>Thu, 07 Sep 2017 07:15:44 GMT</pubDate></item><item><title>Tmux</title><link>https://joey5460.github.io/posts/tmux/</link><dc:creator>zhouyu</dc:creator><description>&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;split: ctrl+b %&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;scroll: ctrl+b pagedown/pageup&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;jump to a pane: ctrl+b q number&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Control+b [, Control+space, Alt+w, Control+b ] --- copy paste&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><guid>https://joey5460.github.io/posts/tmux/</guid><pubDate>Mon, 04 Sep 2017 11:35:26 GMT</pubDate></item><item><title>Welcome to Nikola</title><link>https://joey5460.github.io/posts/welcome-to-nikola/</link><dc:creator>Roberto Alsina</dc:creator><description>&lt;div&gt;&lt;div class="figure"&gt;
-&lt;a class="reference external image-reference" href="https://farm1.staticflickr.com/138/352972944_4f9d568680_z.jpg?zz=1"&gt;&lt;img alt="Nikola Tesla Corner by nicwest, on Flickr" class="thumbnail" src="https://farm1.staticflickr.com/138/352972944_4f9d568680.jpg"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;If you can see this in a web browser, it means you managed to install Nikola,
-and build a site using it. Congratulations!&lt;/p&gt;
-&lt;p&gt;Next steps:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/handbook/"&gt;Read the manual&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://getnikola.com"&gt;Visit the Nikola website to learn more&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/galleries/demo/"&gt;See a demo photo gallery&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/listings-demo/"&gt;See a demo listing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/dr-nikolas-vendetta/"&gt;See a demo of a longer text&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Send feedback to &lt;a class="reference external" href="mailto:info@getnikola.com"&gt;info@getnikola.com&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Commands:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;nikola new_post -2&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>blog</category><category>demo</category><category>nikola</category><category>python</category><guid>https://joey5460.github.io/posts/welcome-to-nikola/</guid><pubDate>Sat, 31 Mar 2012 02:00:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/rst/</guid><pubDate>Thu, 07 Sep 2017 07:15:44 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="fileio.h">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fileio.h | FrogFrogJump</title>
+<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/code.css" rel="stylesheet" type="text/css">
+<!--<link href="/assets/css/side-menu.css" rel="stylesheet" type="text/css">
+--><link href="../../../assets/css/pure.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/page.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/grids-responsive.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://joey5460.github.io/listings/qmlplugin/cpp/fileio.h.html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="https://joey5460.github.io/">
+
+            <span id="blog-title">FrogFrogJump</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="../../../posts/" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="../../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../../categories/" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="fileio.h" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="../../">listings</a></li>
+                <li class="breadcrumb-item"><a href="../">qmlplugin</a></li>
+                <li class="breadcrumb-item"><a href=".">cpp</a></li>
+                <li class="breadcrumb-item active">fileio.h</li>
+</ul></nav><h1>fileio.h
+        <small><a href="fileio.h">(Source)</a></small>
+    </h1>
+    <div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-1"><code data-line-number=" 1"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-1"></a><span class="cp">#ifndef FILEIO_H</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-2"><code data-line-number=" 2"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-2"></a><span class="cp">#define FILEIO_H</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-3"><code data-line-number=" 3"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-3"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-4"><code data-line-number=" 4"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-4"></a><span class="cp">#include</span> <span class="cpf">&lt;QtCore&gt;</span><span class="cp"></span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-5"><code data-line-number=" 5"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-5"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-6"><code data-line-number=" 6"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-6"></a><span class="c1">//! [0]</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-7"><code data-line-number=" 7"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-7"></a><span class="n">class</span> <span class="nl">FileIO</span> <span class="p">:</span> <span class="n">public</span> <span class="n">QObject</span> <span class="p">{</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-8"><code data-line-number=" 8"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-8"></a>    <span class="n">Q_OBJECT</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-9"><code data-line-number=" 9"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-9"></a>    <span class="n">Q_PROPERTY</span><span class="p">(</span><span class="n">QUrl</span> <span class="n">source</span> <span class="n">READ</span> <span class="n">source</span> <span class="n">WRITE</span> <span class="n">setSource</span> <span class="n">NOTIFY</span> <span class="n">sourceChanged</span><span class="p">)</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-10"><code data-line-number="10"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-10"></a>    <span class="n">Q_PROPERTY</span><span class="p">(</span><span class="n">QString</span> <span class="n">text</span> <span class="n">READ</span> <span class="n">text</span> <span class="n">WRITE</span> <span class="n">setText</span> <span class="n">NOTIFY</span> <span class="n">textChanged</span><span class="p">)</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-11"><code data-line-number="11"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-11"></a><span class="nl">public</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-12"><code data-line-number="12"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-12"></a>    <span class="n">FileIO</span><span class="p">(</span><span class="n">QObject</span> <span class="o">*</span><span class="n">parent</span> <span class="o">=</span> <span class="mi">0</span><span class="p">);</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-13"><code data-line-number="13"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-13"></a>    <span class="o">~</span><span class="n">FileIO</span><span class="p">();</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-14"><code data-line-number="14"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-14"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-15"><code data-line-number="15"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-15"></a>    <span class="n">Q_INVOKABLE</span> <span class="kt">void</span> <span class="nf">read</span><span class="p">();</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-16"><code data-line-number="16"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-16"></a>    <span class="n">Q_INVOKABLE</span> <span class="kt">void</span> <span class="nf">write</span><span class="p">();</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-17"><code data-line-number="17"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-17"></a>    <span class="n">QUrl</span> <span class="nf">source</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-18"><code data-line-number="18"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-18"></a>    <span class="n">QString</span> <span class="nf">text</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-19"><code data-line-number="19"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-19"></a><span class="n">public</span> <span class="nl">slots</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-20"><code data-line-number="20"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-20"></a>    <span class="kt">void</span> <span class="n">setSource</span><span class="p">(</span><span class="n">QUrl</span> <span class="n">source</span><span class="p">);</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-21"><code data-line-number="21"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-21"></a>    <span class="kt">void</span> <span class="nf">setText</span><span class="p">(</span><span class="n">QString</span> <span class="n">text</span><span class="p">);</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-22"><code data-line-number="22"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-22"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-23"><code data-line-number="23"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-23"></a><span class="nl">signals</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-24"><code data-line-number="24"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-24"></a>    <span class="kt">void</span> <span class="n">sourceChanged</span><span class="p">(</span><span class="n">QUrl</span> <span class="n">arg</span><span class="p">);</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-25"><code data-line-number="25"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-25"></a>    <span class="kt">void</span> <span class="nf">textChanged</span><span class="p">(</span><span class="n">QString</span> <span class="n">arg</span><span class="p">);</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-26"><code data-line-number="26"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-26"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-27"><code data-line-number="27"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-27"></a><span class="nl">private</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-28"><code data-line-number="28"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-28"></a>    <span class="n">QUrl</span> <span class="n">m_source</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-29"><code data-line-number="29"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-29"></a>    <span class="n">QString</span> <span class="n">m_text</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-30"><code data-line-number="30"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-30"></a><span class="p">};</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-31"><code data-line-number="31"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-31"></a><span class="c1">//! [0]</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsqmlplugincppfileioh-32"><code data-line-number="32"></code></a></td>
+<td class="code"><code><a name="listingsqmlplugincppfileioh-32"></a><span class="cp">#endif</span>
+</code></td>
+</tr>
+</table></div>
+
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/popper.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

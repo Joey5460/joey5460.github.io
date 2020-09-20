@@ -20,6 +20,7 @@
 <link rel="canonical" href="https://joey5460.github.io/posts/qt-test/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="zhouyu">
 <link rel="prev" href="../bash/" title="Bash" type="text/html">
+<link rel="next" href="../qml-plugin/" title="qml plugin" type="text/html">
 <meta property="og:site_name" content="FrogFrogJump">
 <meta property="og:title" content="Qt Test">
 <meta property="og:url" content="https://joey5460.github.io/posts/qt-test/">
@@ -109,19 +110,19 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <pre class="code text"><a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-1"></a>class TestDemo: public QObject
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-2"></a>{
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-3"></a>    public Q_SLOTS:
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-4"></a>        void startTest()
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-5"></a>        {
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-6"></a>            QTest::qExec(this)
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-7"></a>        }
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-8"></a>    private Q_SLOTS:
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-9"></a>        void test1()
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-10"></a>        {
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-11"></a>        }
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-12"></a>
-<a name="rest_code_1b23c4cff3764eaaa1dd60c62791215d-13"></a>}
+    <pre class="code text"><a name="rest_code_a5b882e862a64905887d92633f140630-1"></a>class TestDemo: public QObject
+<a name="rest_code_a5b882e862a64905887d92633f140630-2"></a>{
+<a name="rest_code_a5b882e862a64905887d92633f140630-3"></a>    public Q_SLOTS:
+<a name="rest_code_a5b882e862a64905887d92633f140630-4"></a>        void startTest()
+<a name="rest_code_a5b882e862a64905887d92633f140630-5"></a>        {
+<a name="rest_code_a5b882e862a64905887d92633f140630-6"></a>            QTest::qExec(this)
+<a name="rest_code_a5b882e862a64905887d92633f140630-7"></a>        }
+<a name="rest_code_a5b882e862a64905887d92633f140630-8"></a>    private Q_SLOTS:
+<a name="rest_code_a5b882e862a64905887d92633f140630-9"></a>        void test1()
+<a name="rest_code_a5b882e862a64905887d92633f140630-10"></a>        {
+<a name="rest_code_a5b882e862a64905887d92633f140630-11"></a>        }
+<a name="rest_code_a5b882e862a64905887d92633f140630-12"></a>
+<a name="rest_code_a5b882e862a64905887d92633f140630-13"></a>}
 </pre>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -130,6 +131,9 @@ navbar-dark bg-dark
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../bash/" rel="prev" title="Bash">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../qml-plugin/" rel="next" title="qml plugin">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

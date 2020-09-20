@@ -256,9 +256,9 @@ navbar-dark bg-dark
 <h3>Q&amp;A：</h3>
 <p>Q: <a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit">How to remove file from historical commit</a>
 A:</p>
-<pre class="code text"><a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-1"></a>git filter-branch --index-filter \
-<a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-2"></a>    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
-<a name="rest_code_70ac409aed2446da89987c4b4b52fd7a-3"></a>    --tag-name-filter cat -- --all
+<pre class="code text"><a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-1"></a>git filter-branch --index-filter \
+<a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-2"></a>    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+<a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-3"></a>    --tag-name-filter cat -- --all
 </pre>
 <p>Q: <a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234">You can undo git add before commit with</a>
 A: git reset filename</p>
