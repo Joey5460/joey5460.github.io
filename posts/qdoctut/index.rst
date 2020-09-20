@@ -8,6 +8,10 @@ Required
 - .qdoc
 - .qdocconf
 
+qdocconf example
+----------------
+.. listing:: qdoctut/min.qdocconf 
+    
 
 Tips 
 ----

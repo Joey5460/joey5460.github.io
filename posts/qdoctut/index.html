@@ -35,9 +35,10 @@ qdoc binary
 
 
 
-Tips
-https://doc.qt.io/qt-5/12-0-qdoc-commands-miscellaneous.html
-/meta {X} not dispaly'>
+qdocconf example
+qdoctut/min.qdocconf  (Source)
+ # QDoc is a tool that constantly evolves to suit our needs,
+ # and there '>
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-09-20T16:22:33+08:00">
 </head>
@@ -122,6 +123,50 @@ navbar-dark bg-dark
 <li><p>.qdoc</p></li>
 <li><p>.qdocconf</p></li>
 </ul>
+</div>
+<div class="section" id="qdocconf-example">
+<h2>qdocconf example</h2>
+<p><a class="reference external" href="../../listings/qdoctut/min.qdocconf.html">qdoctut/min.qdocconf</a>  <a class="reference external" href="../../listings/qdoctut/min.qdocconf">(Source)</a></p>
+<pre class="literal-block"> # QDoc is a tool that constantly evolves to suit our needs,
+ # and there are some compatibility issues between old and new
+ # practices. For that reason, any QDoc configuration file needs to
+ # include compat.qdocconf.
+ #include(compat.qdocconf)
+
+ # QDoc needs lists of file extensions to know which files to process in
+ # different situations. Uncomment the following include statement to get
+ # a pre-defined list of file extensions.
+ #include(fileextensions.qdocconf)
+
+ project =  qdoc example
+ description = Sample QDoc project
+
+ # You can also specify file extensions manually.
+ headers= "*.h *.hpp"
+ sources= "*.cpp *.qml *.qdoc"
+
+ # The outputdir variable specifies the directory
+ # where QDoc will put the generated documentation.
+ outputdir   = html
+
+ # The headerdirs variable specifies the directories
+ # containing the header files associated
+ # with the .cpp source files used in the documentation.
+ headerdirs  = .
+
+ # The sourcedirs variable specifies the
+ # directories containing the .cpp or .qdoc
+ # files used in the documentation.
+ sourcedirs  = .
+
+ # The exampledirs variable specifies the directories containing
+ # the source code of the example files.
+ exampledirs = .
+
+ # The imagedirs variable specifies the
+ # directories containing the images used in the documentation.
+ imagedirs   = ./images
+</pre>
 </div>
 <div class="section" id="tips">
 <h2>Tips</h2>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Sep 2020 09:00:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>qdoc note</title><link>https://joey5460.github.io/posts/qdoctut/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="usage"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Sep 2020 10:14:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>qdoc note</title><link>https://joey5460.github.io/posts/qdoctut/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="usage"&gt;
 &lt;h2&gt;Usage&lt;/h2&gt;
 &lt;p&gt;run "qdoc yourconf.qdocconf"&lt;/p&gt;
 &lt;/div&gt;
@@ -10,6 +10,50 @@
 &lt;li&gt;&lt;p&gt;.qdoc&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;.qdocconf&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="qdocconf-example"&gt;
+&lt;h2&gt;qdocconf example&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/listings/qdoctut/min.qdocconf.html"&gt;qdoctut/min.qdocconf&lt;/a&gt;  &lt;a class="reference external" href="https://joey5460.github.io/listings/qdoctut/min.qdocconf"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt; # QDoc is a tool that constantly evolves to suit our needs,
+ # and there are some compatibility issues between old and new
+ # practices. For that reason, any QDoc configuration file needs to
+ # include compat.qdocconf.
+ #include(compat.qdocconf)
+
+ # QDoc needs lists of file extensions to know which files to process in
+ # different situations. Uncomment the following include statement to get
+ # a pre-defined list of file extensions.
+ #include(fileextensions.qdocconf)
+
+ project =  qdoc example
+ description = Sample QDoc project
+
+ # You can also specify file extensions manually.
+ headers= "*.h *.hpp"
+ sources= "*.cpp *.qml *.qdoc"
+
+ # The outputdir variable specifies the directory
+ # where QDoc will put the generated documentation.
+ outputdir   = html
+
+ # The headerdirs variable specifies the directories
+ # containing the header files associated
+ # with the .cpp source files used in the documentation.
+ headerdirs  = .
+
+ # The sourcedirs variable specifies the
+ # directories containing the .cpp or .qdoc
+ # files used in the documentation.
+ sourcedirs  = .
+
+ # The exampledirs variable specifies the directories containing
+ # the source code of the example files.
+ exampledirs = .
+
+ # The imagedirs variable specifies the
+ # directories containing the images used in the documentation.
+ imagedirs   = ./images
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
