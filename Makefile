@@ -36,4 +36,6 @@ virutalenv:
 	pip install --user virtualenv
 	virtualenv -p $$(which python3) ~/website
 
+source:
+	source ../bin/activate
 

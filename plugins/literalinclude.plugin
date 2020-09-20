@@ -1,0 +1,13 @@
+[Core]
+name = rest_literalinclude
+module = literalinclude
+
+[Nikola]
+compiler = rest
+PluginCategory = restExtension
+
+[Documentation]
+author = Joey
+version = 0.1
+website = https://joey5460.github.io/
+description = refer to media
