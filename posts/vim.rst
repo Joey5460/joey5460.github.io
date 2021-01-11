@@ -1,0 +1,1 @@
+/home/fossy/projs/notes/vim.rst

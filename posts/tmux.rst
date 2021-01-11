@@ -1,4 +1,1 @@
-- split: ctrl+b %
-- scroll: ctrl+b pagedown/pageup
-- jump to a pane: ctrl+b q number  
-- Control+b [, Control+space, Alt+w, Control+b ] --- copy paste   
+/home/fossy/projs/notes/tmux.rst
