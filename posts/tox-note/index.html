@@ -108,7 +108,7 @@ navbar-dark bg-dark
 <div class="section" id="compile-libsodium">
 <h2>compile libsodium</h2>
 <p>configure</p>
-<pre class="code text"><a name="rest_code_bf082ae2bf7f4d6b92babcd4e8ecbf26-1"></a>./configure --prefix=~/projs/user/local
+<pre class="code text"><a name="rest_code_43807b6436ef46daaf0a84d7a3302176-1"></a>./configure --prefix=~/projs/user/local
 </pre>
 </div>
 <div class="section" id="tox-complile">
@@ -130,36 +130,38 @@ cmake ..</p>
 <p>signal pushChatPage(string name)</p>
 <p>The custom model must reimplement the following methods to enable read-only access to the data from QML:</p>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html#read-only-data-model">QSqlQueryModel</a> (Read-only Data Model)</p>
-<p>-roleNames()
--data()</p>
+<ul class="simple">
+<li><p>roleNames()</p></li>
+<li><p>data()</p></li>
+</ul>
 <div class="section" id="signal">
 <h3>signal</h3>
 <p>cpp signal can be even connected to qml</p>
-<pre class="code text"><a name="rest_code_96879e8ae43744e29a5a3943f061589d-1"></a>EzTox{
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-2"></a>    id: chat
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-3"></a>        Component.onCompleted: {
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-4"></a>        chat.friendMessageReceived.connect(onMsgReceived)
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-5"></a>    }
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-6"></a>    function onMsgReceived(id, notice) {
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-7"></a>        console.log("Sending to "+id+ ","+notice);
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-8"></a>    }
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-9"></a>}
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-10"></a>Connections {
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-11"></a>    target: contactPage
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-12"></a>    function onPushChatPage(name)  {
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-13"></a>        stackView.push("./ConversationPage.qml", {inConversationWith: name});
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-14"></a>        chat.run();
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-15"></a>    }
-<a name="rest_code_96879e8ae43744e29a5a3943f061589d-16"></a>}
+<pre class="code text"><a name="rest_code_c498082e358f4d9bb18a37e37db4603b-1"></a>EzTox{
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-2"></a>    id: chat
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-3"></a>        Component.onCompleted: {
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-4"></a>        chat.friendMessageReceived.connect(onMsgReceived)
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-5"></a>    }
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-6"></a>    function onMsgReceived(id, notice) {
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-7"></a>        console.log("Sending to "+id+ ","+notice);
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-8"></a>    }
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-9"></a>}
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-10"></a>Connections {
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-11"></a>    target: contactPage
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-12"></a>    function onPushChatPage(name)  {
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-13"></a>        stackView.push("./ConversationPage.qml", {inConversationWith: name});
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-14"></a>        chat.run();
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-15"></a>    }
+<a name="rest_code_c498082e358f4d9bb18a37e37db4603b-16"></a>}
 </pre>
 </div>
 </div>
 <div class="section" id="sql">
 <h2>sql</h2>
-<pre class="code text"><a name="rest_code_b9746d116cb541339df6ba39f5192472-1"></a>QSqlQuery query;
-<a name="rest_code_b9746d116cb541339df6ba39f5192472-2"></a>QString sql = "DELETE FROM Contacts WHERE name = '" + name + "'";
-<a name="rest_code_b9746d116cb541339df6ba39f5192472-3"></a>if (!query.exec(sql))
-<a name="rest_code_b9746d116cb541339df6ba39f5192472-4"></a>    qFatal("delete failed: %s", qPrintable(query.lastError().text()));
+<pre class="code text"><a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-1"></a>QSqlQuery query;
+<a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-2"></a>QString sql = "DELETE FROM Contacts WHERE name = '" + name + "'";
+<a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-3"></a>if (!query.exec(sql))
+<a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-4"></a>    qFatal("delete failed: %s", qPrintable(query.lastError().text()));
 </pre>
 </div>
 <div class="section" id="vim">

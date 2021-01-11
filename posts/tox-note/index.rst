@@ -41,8 +41,8 @@ The custom model must reimplement the following methods to enable read-only acce
 
 QSqlQueryModel_ (Read-only Data Model)
 
--roleNames()
--data()
+- roleNames()
+- data()
 
 .. _QSqlQueryModel: https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html#read-only-data-model
 

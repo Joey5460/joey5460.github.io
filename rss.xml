@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 Jan 2021 14:13:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>tox note</title><link>https://joey5460.github.io/posts/tox-note/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="c-compile"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 Jan 2021 14:16:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>tox note</title><link>https://joey5460.github.io/posts/tox-note/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="c-compile"&gt;
 &lt;h2&gt;c++ compile&lt;/h2&gt;
 &lt;p&gt;gcc -I/usr/local/include xxx.c -o xxx -L/usr/local/lib -Wl,-rpath, DIR&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/480764/linux-error-while-loading-shared-libraries-cannot-open-shared-object-file-no-s"&gt;https://stackoverflow.com/questions/480764/linux-error-while-loading-shared-libraries-cannot-open-shared-object-file-no-s&lt;/a&gt;&lt;/p&gt;
@@ -8,7 +8,7 @@
 &lt;div class="section" id="compile-libsodium"&gt;
 &lt;h2&gt;compile libsodium&lt;/h2&gt;
 &lt;p&gt;configure&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_bf082ae2bf7f4d6b92babcd4e8ecbf26-1"&gt;&lt;/a&gt;./configure --prefix=~/projs/user/local
+&lt;pre class="code text"&gt;&lt;a name="rest_code_43807b6436ef46daaf0a84d7a3302176-1"&gt;&lt;/a&gt;./configure --prefix=~/projs/user/local
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="tox-complile"&gt;
 &lt;h2&gt;tox complile&lt;/h2&gt;
@@ -29,35 +29,37 @@ cmake ..&lt;/p&gt;
 &lt;p&gt;signal pushChatPage(string name)&lt;/p&gt;
 &lt;p&gt;The custom model must reimplement the following methods to enable read-only access to the data from QML:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html#read-only-data-model"&gt;QSqlQueryModel&lt;/a&gt; (Read-only Data Model)&lt;/p&gt;
-&lt;p&gt;-roleNames()
--data()&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;roleNames()&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;data()&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="section" id="signal"&gt;
 &lt;h3&gt;signal&lt;/h3&gt;
 &lt;p&gt;cpp signal can be even connected to qml&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-1"&gt;&lt;/a&gt;EzTox{
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-2"&gt;&lt;/a&gt;    id: chat
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-3"&gt;&lt;/a&gt;        Component.onCompleted: {
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-4"&gt;&lt;/a&gt;        chat.friendMessageReceived.connect(onMsgReceived)
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-5"&gt;&lt;/a&gt;    }
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-6"&gt;&lt;/a&gt;    function onMsgReceived(id, notice) {
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-7"&gt;&lt;/a&gt;        console.log("Sending to "+id+ ","+notice);
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-8"&gt;&lt;/a&gt;    }
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-9"&gt;&lt;/a&gt;}
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-10"&gt;&lt;/a&gt;Connections {
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-11"&gt;&lt;/a&gt;    target: contactPage
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-12"&gt;&lt;/a&gt;    function onPushChatPage(name)  {
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-13"&gt;&lt;/a&gt;        stackView.push("./ConversationPage.qml", {inConversationWith: name});
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-14"&gt;&lt;/a&gt;        chat.run();
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-15"&gt;&lt;/a&gt;    }
-&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-16"&gt;&lt;/a&gt;}
+&lt;pre class="code text"&gt;&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-1"&gt;&lt;/a&gt;EzTox{
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-2"&gt;&lt;/a&gt;    id: chat
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-3"&gt;&lt;/a&gt;        Component.onCompleted: {
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-4"&gt;&lt;/a&gt;        chat.friendMessageReceived.connect(onMsgReceived)
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-5"&gt;&lt;/a&gt;    }
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-6"&gt;&lt;/a&gt;    function onMsgReceived(id, notice) {
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-7"&gt;&lt;/a&gt;        console.log("Sending to "+id+ ","+notice);
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-8"&gt;&lt;/a&gt;    }
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-9"&gt;&lt;/a&gt;}
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-10"&gt;&lt;/a&gt;Connections {
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-11"&gt;&lt;/a&gt;    target: contactPage
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-12"&gt;&lt;/a&gt;    function onPushChatPage(name)  {
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-13"&gt;&lt;/a&gt;        stackView.push("./ConversationPage.qml", {inConversationWith: name});
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-14"&gt;&lt;/a&gt;        chat.run();
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-15"&gt;&lt;/a&gt;    }
+&lt;a name="rest_code_c498082e358f4d9bb18a37e37db4603b-16"&gt;&lt;/a&gt;}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="sql"&gt;
 &lt;h2&gt;sql&lt;/h2&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-1"&gt;&lt;/a&gt;QSqlQuery query;
-&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-2"&gt;&lt;/a&gt;QString sql = "DELETE FROM Contacts WHERE name = '" + name + "'";
-&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-3"&gt;&lt;/a&gt;if (!query.exec(sql))
-&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-4"&gt;&lt;/a&gt;    qFatal("delete failed: %s", qPrintable(query.lastError().text()));
+&lt;pre class="code text"&gt;&lt;a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-1"&gt;&lt;/a&gt;QSqlQuery query;
+&lt;a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-2"&gt;&lt;/a&gt;QString sql = "DELETE FROM Contacts WHERE name = '" + name + "'";
+&lt;a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-3"&gt;&lt;/a&gt;if (!query.exec(sql))
+&lt;a name="rest_code_42beb8d1cfeb4bd0ae299f7be3dc8d84-4"&gt;&lt;/a&gt;    qFatal("delete failed: %s", qPrintable(query.lastError().text()));
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="vim"&gt;
 &lt;h2&gt;vim&lt;/h2&gt;
