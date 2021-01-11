@@ -1,5 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Sep 2020 10:14:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>qdoc note</title><link>https://joey5460.github.io/posts/qdoctut/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="usage"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FrogFrogJump</title><link>https://joey5460.github.io/</link><description>personal websit</description><atom:link href="https://joey5460.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:zhouyu5460@gmail.com"&gt;zhouyu&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 Jan 2021 14:13:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>tox note</title><link>https://joey5460.github.io/posts/tox-note/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="c-compile"&gt;
+&lt;h2&gt;c++ compile&lt;/h2&gt;
+&lt;p&gt;gcc -I/usr/local/include xxx.c -o xxx -L/usr/local/lib -Wl,-rpath, DIR&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/480764/linux-error-while-loading-shared-libraries-cannot-open-shared-object-file-no-s"&gt;https://stackoverflow.com/questions/480764/linux-error-while-loading-shared-libraries-cannot-open-shared-object-file-no-s&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/6562403/i-dont-understand-wl-rpath-wl"&gt;https://stackoverflow.com/questions/6562403/i-dont-understand-wl-rpath-wl&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="compile-libsodium"&gt;
+&lt;h2&gt;compile libsodium&lt;/h2&gt;
+&lt;p&gt;configure&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_bf082ae2bf7f4d6b92babcd4e8ecbf26-1"&gt;&lt;/a&gt;./configure --prefix=~/projs/user/local
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="tox-complile"&gt;
+&lt;h2&gt;tox complile&lt;/h2&gt;
+&lt;p&gt;export PKG_CONFIG_PATH=~/projs/usr/local/lib/pkgconfig
+mkdir build
+cd build
+cmake ..&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sample"&gt;
+&lt;h2&gt;sample&lt;/h2&gt;
+&lt;p&gt;store key&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://wiki.tox.chat/developers/client_examples/echo_bot"&gt;https://wiki.tox.chat/developers/client_examples/echo_bot&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="qml"&gt;
+&lt;h2&gt;qml&lt;/h2&gt;
+&lt;p&gt;onClicked:{}&lt;/p&gt;
+&lt;p&gt;property string currentContact : ""&lt;/p&gt;
+&lt;p&gt;signal pushChatPage(string name)&lt;/p&gt;
+&lt;p&gt;The custom model must reimplement the following methods to enable read-only access to the data from QML:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html#read-only-data-model"&gt;QSqlQueryModel&lt;/a&gt; (Read-only Data Model)&lt;/p&gt;
+&lt;p&gt;-roleNames()
+-data()&lt;/p&gt;
+&lt;div class="section" id="signal"&gt;
+&lt;h3&gt;signal&lt;/h3&gt;
+&lt;p&gt;cpp signal can be even connected to qml&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-1"&gt;&lt;/a&gt;EzTox{
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-2"&gt;&lt;/a&gt;    id: chat
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-3"&gt;&lt;/a&gt;        Component.onCompleted: {
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-4"&gt;&lt;/a&gt;        chat.friendMessageReceived.connect(onMsgReceived)
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-5"&gt;&lt;/a&gt;    }
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-6"&gt;&lt;/a&gt;    function onMsgReceived(id, notice) {
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-7"&gt;&lt;/a&gt;        console.log("Sending to "+id+ ","+notice);
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-8"&gt;&lt;/a&gt;    }
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-9"&gt;&lt;/a&gt;}
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-10"&gt;&lt;/a&gt;Connections {
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-11"&gt;&lt;/a&gt;    target: contactPage
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-12"&gt;&lt;/a&gt;    function onPushChatPage(name)  {
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-13"&gt;&lt;/a&gt;        stackView.push("./ConversationPage.qml", {inConversationWith: name});
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-14"&gt;&lt;/a&gt;        chat.run();
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-15"&gt;&lt;/a&gt;    }
+&lt;a name="rest_code_96879e8ae43744e29a5a3943f061589d-16"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sql"&gt;
+&lt;h2&gt;sql&lt;/h2&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-1"&gt;&lt;/a&gt;QSqlQuery query;
+&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-2"&gt;&lt;/a&gt;QString sql = "DELETE FROM Contacts WHERE name = '" + name + "'";
+&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-3"&gt;&lt;/a&gt;if (!query.exec(sql))
+&lt;a name="rest_code_b9746d116cb541339df6ba39f5192472-4"&gt;&lt;/a&gt;    qFatal("delete failed: %s", qPrintable(query.lastError().text()));
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="vim"&gt;
+&lt;h2&gt;vim&lt;/h2&gt;
+&lt;p&gt;in .vimrc&lt;/p&gt;
+&lt;p&gt;autocmd FileType qml noremap &amp;lt;F5&amp;gt; :wa &amp;lt;CR&amp;gt;: !qmlscene main.qml &amp;lt;CR&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://andrew.stwrt.ca/posts/vim-ctags/"&gt;https://andrew.stwrt.ca/posts/vim-ctags/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tmux"&gt;
+&lt;h2&gt;tmux&lt;/h2&gt;
+&lt;p&gt;in .tmux.conf&lt;/p&gt;
+&lt;p&gt;bind-key -n F5 run "qmlscene main.qml"&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cmd"&gt;
+&lt;h2&gt;cmd&lt;/h2&gt;
+&lt;p&gt;grep str -r . -i -n&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/tox-note/</guid><pubDate>Mon, 11 Jan 2021 13:56:40 GMT</pubDate></item><item><title>vim</title><link>https://joey5460.github.io/posts/vim/</link><dc:creator>zhouyu</dc:creator><description>&lt;div class="section" id="vim"&gt;
+&lt;h2&gt;vim&lt;/h2&gt;
+&lt;div class="section" id="setting-vimrc"&gt;
+&lt;h3&gt;setting(.vimrc)&lt;/h3&gt;
+&lt;p&gt;autocmd FileType cpp noremap &amp;lt;F7&amp;gt; :wa &amp;lt;CR&amp;gt;: make -j4&amp;lt;CR&amp;gt;
+autocmd FileType cpp noremap &amp;lt;F5&amp;gt; :wa &amp;lt;CR&amp;gt;: !make run &amp;lt;CR&amp;gt;
+autocmd FileType cpp noremap &amp;lt;F12&amp;gt; :cw &amp;lt;CR&amp;gt; : /error&amp;lt;CR&amp;gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="shortcut"&gt;
+&lt;h3&gt;shortcut&lt;/h3&gt;
+&lt;p&gt;delete&lt;/p&gt;
+&lt;p&gt;-dt/df 'c' --- not include c/include c
+- db
+- de
+- d$
+- c w: delete word and insert mode
+- Ctrl + w: delelte previous word in insert mode
+- shift+c: delete till end and insert&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/1737163/traversing-text-in-insert-mode#1737259"&gt;move&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;A: move to end then edit&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;b --- word begining&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;e --- word ending&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;w --- next word&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://vim.wikia.com/wiki/Any_word_completion"&gt;completion&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ctrl+n
+ctrl+p&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cmd"&gt;
+&lt;h3&gt;cmd&lt;/h3&gt;
+&lt;p&gt;%s&lt;/p&gt;
+&lt;p&gt;:%s/.*n.*n.*n/0r/g (&lt;a class="reference external" href="https://stackoverflow.com/questions/10413906/how-to-add-a-line-after-every-few-lines-in-vim#10414058"&gt;link2&lt;/a&gt;)
+&amp;amp; ---- repeat replace&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="search"&gt;
+&lt;h3&gt;search&lt;/h3&gt;
+&lt;p&gt;:grep --- search text&lt;/p&gt;
+&lt;p&gt;/c --- insensive match&lt;/p&gt;
+&lt;p&gt;shift+v --- for full lines&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;quickfix&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;:copen  open quickfix&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;autocmd QuickFixCmdPost &lt;em&gt;grep&lt;/em&gt; cwindow&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;autocmd QuickFixCmdPost [^l]* nested cwindow&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;g then ctrl+g --- count (&lt;a class="reference external" href="https://unix.stackexchange.com/questions/145289/how-can-i-count-the-number-of-words-in-a-file-whilst-editing-the-file-in-vim#145293"&gt;link0&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;^/0(zero) --- You can use ^ or 0 (Zero) in normal mode to move to the beginning of a line.&lt;/p&gt;
+&lt;p&gt;@: --- To repeat a command-line command (&lt;a class="reference external" href="https://stackoverflow.com/questions/4789811/how-do-i-repeat-any-command-in-vim-like-c-x-z-in-emacs"&gt;link1&lt;/a&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="plugins"&gt;
+&lt;h3&gt;Plugins&lt;/h3&gt;
+&lt;p&gt;nerdtree
+- ?
+- B: open bookmark
+- cd: change path to&lt;/p&gt;
+&lt;p&gt;fugutive
+- Gstatus --- then '-' add/reset
+- Gcommt -am "messages"
+- Gpush origin branch&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ctags"&gt;
+&lt;h3&gt;ctags&lt;/h3&gt;
+&lt;p&gt;ctags -R . --c++-kinds=+pf --extra=+q&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;Make a directory, for example ~/.vim/tags that will hold your ctags.&lt;/p&gt;
+&lt;p&gt;ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f qt5 /home/fossy/apps/qt5/5.15.0/gcc_64/include&lt;/p&gt;
+&lt;p&gt;set tags+=~/.vim/tags/qt5&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Shortcut&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;g ] / ctrl+]&lt;/p&gt;
+&lt;p&gt;gf got header file&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://vim.fandom.com/wiki/C%2B%2B_code_completion"&gt;ctags&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/vim/</guid><pubDate>Sat, 28 Nov 2020 15:34:19 GMT</pubDate></item><item><title>qdoc note</title><link>https://joey5460.github.io/posts/qdoctut/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="usage"&gt;
 &lt;h2&gt;Usage&lt;/h2&gt;
 &lt;p&gt;run "qdoc yourconf.qdocconf"&lt;/p&gt;
 &lt;/div&gt;
@@ -69,10 +222,10 @@
 &lt;/div&gt;
 &lt;div class="section" id="specify-platform"&gt;
 &lt;h2&gt;specify platform&lt;/h2&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-1"&gt;&lt;/a&gt;linux:!android {
-&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-2"&gt;&lt;/a&gt;    message("* Using settings for Unix/Linux.")
-&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-3"&gt;&lt;/a&gt;    LIBS += -L/path/to/linux/libs
-&lt;a name="rest_code_20964d7567264327a9afab4a5c6cdd85-4"&gt;&lt;/a&gt;}
+&lt;pre class="code text"&gt;&lt;a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-1"&gt;&lt;/a&gt;linux:!android {
+&lt;a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-2"&gt;&lt;/a&gt;    message("* Using settings for Unix/Linux.")
+&lt;a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-3"&gt;&lt;/a&gt;    LIBS += -L/path/to/linux/libs
+&lt;a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-4"&gt;&lt;/a&gt;}
 &lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/18104716/how-to-specify-libraries-only-for-android-platform-build-in-pro-file"&gt;https://stackoverflow.com/questions/18104716/how-to-specify-libraries-only-for-android-platform-build-in-pro-file&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="extending-with-android"&gt;
@@ -84,18 +237,25 @@
 &lt;h2&gt;Web Assembly&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/59545455/web-assembly-typeerror-networkerror-when-attempting-to-fetch-resource"&gt;https://stackoverflow.com/questions/59545455/web-assembly-typeerror-networkerror-when-attempting-to-fetch-resource&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;emrun --no_browser --port 8080 .&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-1"&gt;&lt;/a&gt;Page {
-&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-2"&gt;&lt;/a&gt;    id: root
-&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-3"&gt;&lt;/a&gt;    property string inConversationWith
-&lt;a name="rest_code_e711c373536a4157891d06d0487db1e7-4"&gt;&lt;/a&gt;}
+&lt;pre class="code text"&gt;&lt;a name="rest_code_747d1d32bd994449b640e2578652a15d-1"&gt;&lt;/a&gt;Page {
+&lt;a name="rest_code_747d1d32bd994449b640e2578652a15d-2"&gt;&lt;/a&gt;    id: root
+&lt;a name="rest_code_747d1d32bd994449b640e2578652a15d-3"&gt;&lt;/a&gt;    property string inConversationWith
+&lt;a name="rest_code_747d1d32bd994449b640e2578652a15d-4"&gt;&lt;/a&gt;}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="debug"&gt;
 &lt;h2&gt;Debug&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qtquick-debugging.html"&gt;https://doc.qt.io/qt-5/qtquick-debugging.html&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_781583115550469f8cee2a860ada6f7f-1"&gt;&lt;/a&gt;function f(a, b) {
-&lt;a name="rest_code_781583115550469f8cee2a860ada6f7f-2"&gt;&lt;/a&gt;  console.log("a is ", a, "b is ", b);
-&lt;a name="rest_code_781583115550469f8cee2a860ada6f7f-3"&gt;&lt;/a&gt;}
+&lt;pre class="code text"&gt;&lt;a name="rest_code_b65c0ef07a6b463b835ba06985a1a36d-1"&gt;&lt;/a&gt;function f(a, b) {
+&lt;a name="rest_code_b65c0ef07a6b463b835ba06985a1a36d-2"&gt;&lt;/a&gt;  console.log("a is ", a, "b is ", b);
+&lt;a name="rest_code_b65c0ef07a6b463b835ba06985a1a36d-3"&gt;&lt;/a&gt;}
 &lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="qmldir"&gt;
+&lt;h2&gt;qmldir&lt;/h2&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_54c61524d42d459ea34a88fcf7e1c746-1"&gt;&lt;/a&gt;module example.io #(uri/path)
+&lt;a name="rest_code_54c61524d42d459ea34a88fcf7e1c746-2"&gt;&lt;/a&gt;plugin plugin #(libplugin)
+&lt;/pre&gt;&lt;p&gt;qmlRegisterType&amp;lt;cppclass&amp;gt;&amp;lt;uri,1,0,"qmlcppclass"&amp;gt;&lt;/p&gt;
+&lt;p&gt;import module(uri) 1.0&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="connect"&gt;
 &lt;h2&gt;connect&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://felgo.com/doc/felgo-qml-communication-basics/"&gt;https://felgo.com/doc/felgo-qml-communication-basics/&lt;/a&gt;&lt;/p&gt;
@@ -103,12 +263,109 @@
 &lt;/div&gt;
 &lt;div class="section" id="element"&gt;
 &lt;h2&gt;Element&lt;/h2&gt;
-&lt;p&gt;AppliationWindow
-Page
-Header
-Label&lt;/p&gt;
-&lt;p&gt;anchors.fill: parent
-layout&lt;/p&gt;
+&lt;p&gt;AppliationWindow/item/page/rectangle&lt;/p&gt;
+&lt;p&gt;Item&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;width&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;height&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;visible&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Page&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;header&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Label&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;text&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;StactView&lt;/p&gt;
+&lt;p&gt;ToolBar&lt;/p&gt;
+&lt;p&gt;Drawer&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qml-qtquick-listview.html"&gt;ListView&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;model: ListModel/QAbastractModel&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;delegate: ItemDelegate The index is exposed as an accessible index property.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="variant"&gt;
+&lt;h2&gt;Variant&lt;/h2&gt;
+&lt;p&gt;property string currentContact : ""&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="property"&gt;
+&lt;h2&gt;Property&lt;/h2&gt;
+&lt;p&gt;write read notify&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_d16817afb9434521b2a372a47da9f908-1"&gt;&lt;/a&gt;model: SqlChatModel{
+&lt;a name="rest_code_d16817afb9434521b2a372a47da9f908-2"&gt;&lt;/a&gt;    recipient: inConversationWith
+&lt;a name="rest_code_d16817afb9434521b2a372a47da9f908-3"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;p&gt;func: eg model.sendMessage&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="layout"&gt;
+&lt;h2&gt;Layout&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;anchors.fill: parent&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;anchors.centerIn: parent&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Layout.fillWidth&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;layout&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Parent is null in ListView delegate after upgrade to Qt 5.15&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/63767669/parent-is-null-in-listview-delegate-after-upgrade-to-qt-5-15"&gt;https://stackoverflow.com/questions/63767669/parent-is-null-in-listview-delegate-after-upgrade-to-qt-5-15&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="componet"&gt;
+&lt;h2&gt;Componet&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/archives/qt-4.8/qml-component.html"&gt;https://doc.qt.io/archives/qt-4.8/qml-component.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Component.onCompleted: {}
+Component.onDestruction:{}&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-1"&gt;&lt;/a&gt;Loader {
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-2"&gt;&lt;/a&gt;        id: dialLoader
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-4"&gt;&lt;/a&gt;        anchors.left: parent.left
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-5"&gt;&lt;/a&gt;        anchors.right: parent.right
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-6"&gt;&lt;/a&gt;        anchors.top: parent.top
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-7"&gt;&lt;/a&gt;        anchors.bottom: analogButton.top
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-9"&gt;&lt;/a&gt;        onLoaded: {
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-10"&gt;&lt;/a&gt;            binder.target = dialLoader.item;
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-11"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-12"&gt;&lt;/a&gt;}
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-13"&gt;&lt;/a&gt;
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-14"&gt;&lt;/a&gt;Binding {
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-15"&gt;&lt;/a&gt;        id: binder
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-17"&gt;&lt;/a&gt;        property: "speed"
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-18"&gt;&lt;/a&gt;        value: speed
+&lt;a name="rest_code_4c1af141345249f7a1041d0892153725-19"&gt;&lt;/a&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="signals-call-back"&gt;
+&lt;h2&gt;Signals(call back)&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/archives/qt-4.8/qmlevents.html"&gt;https://doc.qt.io/archives/qt-4.8/qmlevents.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;id.singalFunc.connect(slotFunc)&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-1"&gt;&lt;/a&gt;Rectangle {
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-2"&gt;&lt;/a&gt;     id: relay
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-4"&gt;&lt;/a&gt;     signal send(string person, string notice)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-5"&gt;&lt;/a&gt;     onSend: console.log("Send signal to: " + person + ", " + notice)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-7"&gt;&lt;/a&gt;     Component.onCompleted: {
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-8"&gt;&lt;/a&gt;         relay.send.connect(sendToPost)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-9"&gt;&lt;/a&gt;         relay.send.connect(sendToTelegraph)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-10"&gt;&lt;/a&gt;         relay.send.connect(sendToEmail)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-11"&gt;&lt;/a&gt;         relay.send("Tom", "Happy Birthday")
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-12"&gt;&lt;/a&gt;     }
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-13"&gt;&lt;/a&gt;
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-14"&gt;&lt;/a&gt;     function sendToPost(person, notice) {
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-15"&gt;&lt;/a&gt;         console.log("Sending to post: " + person + ", " + notice)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-16"&gt;&lt;/a&gt;     }
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-17"&gt;&lt;/a&gt;     function sendToTelegraph(person, notice) {
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-18"&gt;&lt;/a&gt;         console.log("Sending to telegraph: " + person + ", " + notice)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-19"&gt;&lt;/a&gt;     }
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-20"&gt;&lt;/a&gt;     function sendToEmail(person, notice) {
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-21"&gt;&lt;/a&gt;         console.log("Sending to email: " + person + ", " + notice)
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-22"&gt;&lt;/a&gt;     }
+&lt;a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-23"&gt;&lt;/a&gt; }
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qml-qtqml-connections.html#details"&gt;https://doc.qt.io/qt-5/qml-qtqml-connections.html#details&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://doc.qt.io/qt-5/qtqml-syntax-signals.html"&gt;https://doc.qt.io/qt-5/qtqml-syntax-signals.html&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/qml/</guid><pubDate>Sun, 30 Aug 2020 15:33:31 GMT</pubDate></item><item><title>qml plugin</title><link>https://joey5460.github.io/posts/qml-plugin/</link><dc:creator>zhouyu</dc:creator><description>&lt;div class="section" id="step-1"&gt;
 &lt;h2&gt;step 1&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.io/listings/qmlplugin/cpp/fileio.h.html"&gt;qmlplugin/cpp/fileio.h&lt;/a&gt;  &lt;a class="reference external" href="https://joey5460.github.io/listings/qmlplugin/cpp/fileio.h"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
@@ -138,21 +395,21 @@ private:
     QString m_text;
 };
 &lt;/pre&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_faf91a17a7954042a4b17288a23f3433-1"&gt;&lt;/a&gt;qmlRegisterType&amp;lt;FileIO&amp;gt;(uri, 1, 0, "FileIO");
+&lt;pre class="code text"&gt;&lt;a name="rest_code_69816e2851d64703bc54722f6d291e85-1"&gt;&lt;/a&gt;qmlRegisterType&amp;lt;FileIO&amp;gt;(uri, 1, 0, "FileIO");
 &lt;/pre&gt;&lt;p&gt;FileIO with &amp;lt;&amp;gt; is our class name. FileIO with "" is our element name used in qml&lt;/p&gt;
-&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/qml-plugin/</guid><pubDate>Sun, 26 Jul 2020 12:00:41 GMT</pubDate></item><item><title>Qt Test</title><link>https://joey5460.github.io/posts/qt-test/</link><dc:creator>zhouyu</dc:creator><description>&lt;pre class="code text"&gt;&lt;a name="rest_code_a5b882e862a64905887d92633f140630-1"&gt;&lt;/a&gt;class TestDemo: public QObject
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-2"&gt;&lt;/a&gt;{
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-3"&gt;&lt;/a&gt;    public Q_SLOTS:
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-4"&gt;&lt;/a&gt;        void startTest()
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-5"&gt;&lt;/a&gt;        {
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-6"&gt;&lt;/a&gt;            QTest::qExec(this)
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-7"&gt;&lt;/a&gt;        }
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-8"&gt;&lt;/a&gt;    private Q_SLOTS:
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-9"&gt;&lt;/a&gt;        void test1()
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-10"&gt;&lt;/a&gt;        {
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-11"&gt;&lt;/a&gt;        }
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_a5b882e862a64905887d92633f140630-13"&gt;&lt;/a&gt;}
+&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/qml-plugin/</guid><pubDate>Sun, 26 Jul 2020 12:00:41 GMT</pubDate></item><item><title>Qt Test</title><link>https://joey5460.github.io/posts/qt-test/</link><dc:creator>zhouyu</dc:creator><description>&lt;pre class="code text"&gt;&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-1"&gt;&lt;/a&gt;class TestDemo: public QObject
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-2"&gt;&lt;/a&gt;{
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-3"&gt;&lt;/a&gt;    public Q_SLOTS:
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-4"&gt;&lt;/a&gt;        void startTest()
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-5"&gt;&lt;/a&gt;        {
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-6"&gt;&lt;/a&gt;            QTest::qExec(this)
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-7"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-8"&gt;&lt;/a&gt;    private Q_SLOTS:
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-9"&gt;&lt;/a&gt;        void test1()
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-10"&gt;&lt;/a&gt;        {
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-11"&gt;&lt;/a&gt;        }
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0a5645f7ac224837a4d84135eef988ea-13"&gt;&lt;/a&gt;}
 &lt;/pre&gt;</description><category>qt</category><guid>https://joey5460.github.io/posts/qt-test/</guid><pubDate>Tue, 21 Apr 2020 16:07:52 GMT</pubDate></item><item><title>Bash</title><link>https://joey5460.github.io/posts/bash/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="control"&gt;
 &lt;h2&gt;control&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -268,38 +525,38 @@ sudo docker run hello-world
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;dt&gt;Kernel module example&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-15"&gt;&lt;/a&gt;
-&lt;a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;dd&gt;&lt;pre class="code c"&gt;&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/module.h&amp;gt;&lt;/span&gt;&lt;span class="c1"&gt;       // Needed by all modules&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;linux/kernel.h&amp;gt;&lt;/span&gt;&lt;span class="c1"&gt;       // KERN_INFO&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-4"&gt;&lt;/a&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;init_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-6"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Loading s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-8"&gt;&lt;/a&gt;     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-9"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-11"&gt;&lt;/a&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;cleanup_module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-12"&gt;&lt;/a&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-13"&gt;&lt;/a&gt;     &lt;span class="n"&gt;printk&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;KERN_INFO&lt;/span&gt; &lt;span class="s"&gt;"== Exit s2fs module ==&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-14"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-16"&gt;&lt;/a&gt;&lt;span class="n"&gt;MODULE_LICENSE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Makefile&lt;/dt&gt;
-&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
+&lt;dd&gt;&lt;pre class="code makefile"&gt;&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-1"&gt;&lt;/a&gt;&lt;span class="nv"&gt;obj-m&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; lkm_test.o
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;KDIR&lt;/span&gt; &lt;span class="o"&gt;?=&lt;/span&gt; /lib/modules/&lt;span class="k"&gt;$(&lt;/span&gt;shell uname -r&lt;span class="k"&gt;)&lt;/span&gt;/build
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-4"&gt;&lt;/a&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-5"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; modules
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-7"&gt;&lt;/a&gt;&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-8"&gt;&lt;/a&gt;        make -C &lt;span class="k"&gt;$(&lt;/span&gt;KDIR&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;PWD&lt;span class="k"&gt;)&lt;/span&gt; clean
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-10"&gt;&lt;/a&gt;&lt;span class="nf"&gt;load&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-11"&gt;&lt;/a&gt;        sudo insmod lkm_test.ko
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-13"&gt;&lt;/a&gt;&lt;span class="nf"&gt;unload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-14"&gt;&lt;/a&gt;        sudo rmmod lkm_test
 &lt;/pre&gt;&lt;/dd&gt;
 &lt;dt&gt;Test&lt;/dt&gt;
 &lt;dd&gt;&lt;pre class="literal-block"&gt;dmesg -w
@@ -4160,557 +4417,10 @@ make load&lt;/pre&gt;
 &lt;h3&gt;Q&amp;amp;A：&lt;/h3&gt;
 &lt;p&gt;Q: &lt;a class="reference external" href="https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit"&gt;How to remove file from historical commit&lt;/a&gt;
 A:&lt;/p&gt;
-&lt;pre class="code text"&gt;&lt;a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
-&lt;a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
-&lt;a name="rest_code_9cfb3597f0234c0fb1d328f7684ddc01-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
+&lt;pre class="code text"&gt;&lt;a name="rest_code_bb8305d03f7243f1bc7ef610ba02897b-1"&gt;&lt;/a&gt;git filter-branch --index-filter \
+&lt;a name="rest_code_bb8305d03f7243f1bc7ef610ba02897b-2"&gt;&lt;/a&gt;    'git rm --cached --ignore-unmatch path/to/mylarge_50mb_file' \
+&lt;a name="rest_code_bb8305d03f7243f1bc7ef610ba02897b-3"&gt;&lt;/a&gt;    --tag-name-filter cat -- --all
 &lt;/pre&gt;&lt;p&gt;Q: &lt;a class="reference external" href="http://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit#348234"&gt;You can undo git add before commit with&lt;/a&gt;
 A: git reset filename&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/git/</guid><pubDate>Thu, 07 Dec 2017 06:42:52 GMT</pubDate></item><item><title>小姐姐教泰语</title><link>https://joey5460.github.io/posts/thai/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;dl class="simple"&gt;
-&lt;dt&gt;&lt;a class="reference external" href="https://joey5460.github.io/images/kafang.jpg"&gt;&lt;img alt="xjj" src="https://joey5460.github.io/images/kafang.thumbnail.jpg"&gt;&lt;/a&gt;  &lt;a class="reference external" href="https://joey5460.github.io/images/xjj.png"&gt;&lt;img alt="apple" src="https://joey5460.github.io/images/xjj.thumbnail.png"&gt;&lt;/a&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;ol class="arabic"&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ฟังเพลงจ้า&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/fangplingda.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('fangplingda')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="fangplingda" style="display:none;"&gt;
-        &lt;p&gt;listen_to_music&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/fangplingda1.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('fangplingda1')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="fangplingda1" style="display:none;"&gt;
-        &lt;p&gt;listen_to_music&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ฉลาดจังเลย&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/calazanglui.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('calazanglui')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="calazanglui" style="display:none;"&gt;
-        &lt;p&gt;smart&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/calazanglui1.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('calazanglui1')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="calazanglui1" style="display:none;"&gt;
-        &lt;p&gt;smart&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;แล้วพบกันใหม่&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/laioupoganmai.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('laioupoganmai')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="laioupoganmai" style="display:none;"&gt;
-        &lt;p&gt;see_you&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;คุณหล่อมากนะ&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/kunloumanman.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('kunloumanman')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="kunloumanman" style="display:none;"&gt;
-        &lt;p&gt;you_are_very_handsome&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ทำอะไรอยู่&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/tamalaiyou.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('tamalaiyou')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="tamalaiyou" style="display:none;"&gt;
-        &lt;p&gt;what_are_you_doing&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;วันนี้ทำงานไหม&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/wannitamamai.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('wannitamamai')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="wannitamamai" style="display:none;"&gt;
-        &lt;p&gt;do_you_work_today&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ฉันเพิ่งตื่น&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/chanpendeng.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('chanpendeng')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="chanpendeng" style="display:none;"&gt;
-        &lt;p&gt;i_just_woke_up&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ใช่/ใช่แล้ว&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/cai.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('cai')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="cai" style="display:none;"&gt;
-        &lt;p&gt;yes&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;กินข้าวยัง&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/gin.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('gin')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="gin" style="display:none;"&gt;
-        &lt;p&gt;have_you_eaten_yet&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;สู้ๆนะ&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/sosona.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('sosona')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="sosona" style="display:none;"&gt;
-        &lt;p&gt;keep_it_up&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;เหนื่อย&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/nemai.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('nemai')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="nemai" style="display:none;"&gt;
-        &lt;p&gt;tired?&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;หนาวไหม&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/namai.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('namai')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="namai" style="display:none;"&gt;
-        &lt;p&gt;are_you_cold?&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ดีมากๆ&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/dimakmak.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('dimakmak')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="dimakmak" style="display:none;"&gt;
-        &lt;p&gt;very_good&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ฝันดีนะ&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/fanbi.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('fanbi')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="fanbi" style="display:none;"&gt;
-        &lt;p&gt;goodnight&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;dl&gt;
-&lt;dt&gt;ฉันกำลังจะนอนแล้ว&lt;/dt&gt;
-&lt;dd&gt;
-&lt;audio controls="controls"&gt;  
-   &lt;source src="https://joey5460.github.io/voice/ganman_zainou_laiou.mp3"&gt;  
-&lt;/source&gt;&lt;/audio&gt; 
-&lt;a href="javascript:showhide('ganman_zainou_laiou')"&gt;
-            Click to show/hide.
-&lt;/a&gt;
-&lt;div id="ganman_zainou_laiou" style="display:none;"&gt;
-        &lt;p&gt;I_am_going_to_bed&lt;/p&gt;
-&lt;/div&gt;
-&lt;script&gt;
-function showhide(id) 
-{var event = document.getElementById(id);
-event.style.display = (event.style.display == 'block') ? 'none' : 'block';
-}
-&lt;/script&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/thai/</guid><pubDate>Sat, 07 Oct 2017 09:10:41 GMT</pubDate></item><item><title>ReStructuredText</title><link>https://joey5460.github.io/posts/rst/</link><dc:creator>zhouyu</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduce"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id5"&gt;Introduce&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Some Rst tags are similar to Markdown. For example,&lt;/p&gt;
-&lt;pre class="literal-block"&gt;- , ==== , ----
-
-**strong**, *emphasize*&lt;/pre&gt;
-&lt;p&gt;Result in:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;, ==== , ----&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;strong&lt;/strong&gt;, &lt;em&gt;emphasize&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="contents topic" id="contents"&gt;
-&lt;p class="topic-title"&gt;Contents&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#introduce" id="id5"&gt;Introduce&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#block" id="id6"&gt;Block&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#sections" id="id7"&gt;Sections&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#inline-markup" id="id8"&gt;Inline Markup&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#footnotes" id="id9"&gt;Footnotes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#hyperlinks" id="id10"&gt;Hyperlinks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#math" id="id11"&gt;Math&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="https://joey5460.github.io/posts/rst/#table" id="id12"&gt;Table&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="block"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id6"&gt;Block&lt;/a&gt;&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;a block example::
-
-    This is an example for block&lt;/pre&gt;
-&lt;p&gt;Result in:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a block example:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;This is an example for block&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sections"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id7"&gt;Sections&lt;/a&gt;&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;Chapter 1
-==========
-
-1.1
----
-
-1.1.1
-~~~~~&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="inline-markup"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id8"&gt;Inline Markup&lt;/a&gt;&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;- **bold**
-
-+ *I*
-
-* code sample : ``print ("hello world")``
-
-#. autonumber first with
-#. autonumber second  with&lt;/pre&gt;
-&lt;p&gt;Result in:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;I&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;code sample : &lt;code class="docutils literal"&gt;print ("hello world")&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;&lt;p&gt;autonumber first with&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;autonumber second  with&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="footnotes"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id9"&gt;Footnotes&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;reference: &lt;a class="footnote-reference brackets" href="https://joey5460.github.io/posts/rst/#id3" id="id1"&gt;1&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hyperlinks"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id10"&gt;Hyperlinks&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://joey5460.github.com"&gt;a link to my website&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://joey5460.github.com"&gt;website&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="math"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id11"&gt;Math&lt;/a&gt;&lt;/h2&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;&lt;p&gt;build-in math&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="math"&gt;
-\begin{equation*}
-\frac{ \sum_{t=0}^{N}f(t,k) }{N}
-\end{equation*}
-&lt;/div&gt;
-&lt;ol class="arabic simple" start="2"&gt;
-&lt;li&gt;&lt;p&gt;this is inline math &lt;a class="footnote-reference brackets" href="https://joey5460.github.io/posts/rst/#id4" id="id2"&gt;2&lt;/a&gt; &lt;span class="math"&gt;\(\frac{ \sum_{t=0}^{N}f(t,k) }{N}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="table"&gt;
-&lt;h2&gt;&lt;a class="toc-backref" href="https://joey5460.github.io/posts/rst/#id12"&gt;Table&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Beatiful table&lt;/p&gt;
-&lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 33%"&gt;
-&lt;col style="width: 67%"&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th class="head"&gt;&lt;p&gt;tag&lt;/p&gt;&lt;/th&gt;
-&lt;th class="head"&gt;&lt;p&gt;meaning&lt;/p&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;#.&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;autonumber&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;ol class="arabic simple"&gt;
-&lt;li&gt;
-&lt;/li&gt;&lt;/ol&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;autonumber&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;ol class="arabic simple"&gt;
-&lt;li&gt;
-&lt;/li&gt;&lt;/ol&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;autonumber&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;ol class="arabic simple"&gt;
-&lt;li&gt;
-&lt;/li&gt;&lt;/ol&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;autonumber&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;simple table&lt;/p&gt;
-&lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 50%"&gt;
-&lt;col style="width: 50%"&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th class="head"&gt;&lt;p&gt;header1&lt;/p&gt;&lt;/th&gt;
-&lt;th class="head"&gt;&lt;p&gt;header2&lt;/p&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;ol class="arabic simple"&gt;
-&lt;li&gt;&lt;p&gt;a&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;row1&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;ol class="arabic simple"&gt;
-&lt;li&gt;&lt;p&gt;b&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;row2&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;csv table&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;caption&gt;rst tutorial&lt;/caption&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 50%"&gt;
-&lt;col style="width: 50%"&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;&lt;th class="head"&gt;&lt;p&gt;tag&lt;/p&gt;&lt;/th&gt;
-&lt;th class="head"&gt;&lt;p&gt;meaning&lt;/p&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;*&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;bullet&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;cite&gt;-&lt;/cite&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;bullet as well&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;cite&gt;+&lt;/cite&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;also bullet&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;dl class="footnote brackets"&gt;
-&lt;dt class="label" id="id3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="https://joey5460.github.io/posts/rst/#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html"&gt;http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="https://joey5460.github.io/posts/rst/#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/3610551/math-in-restructuredtext-with-latex#11226398"&gt;https://stackoverflow.com/questions/3610551/math-in-restructuredtext-with-latex#11226398&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/rst/</guid><pubDate>Thu, 07 Sep 2017 07:15:44 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://joey5460.github.io/posts/git/</guid><pubDate>Thu, 07 Dec 2017 06:42:52 GMT</pubDate></item></channel></rss>

@@ -19,15 +19,22 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://joey5460.github.io/posts/tmux/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="zhouyu">
-<link rel="prev" href="../welcome-to-nikola/" title="Welcome to Nikola" type="text/html">
 <link rel="next" href="../rst/" title="ReStructuredText" type="text/html">
 <meta property="og:site_name" content="FrogFrogJump">
 <meta property="og:title" content="Tmux">
 <meta property="og:url" content="https://joey5460.github.io/posts/tmux/">
-<meta property="og:description" content="split: ctrl+b %
+<meta property="og:description" content='shortcut
+
+split: ctrl+b %
 scroll: ctrl+b pagedown/pageup
 jump to a pane: ctrl+b q number
-Control+b [, Control+space, Alt+w, Control+b ] --- copy paste">
+ctrl+b [, Control+space, Alt+w, Control+b ] --- copy paste
+
+
+
+.tmux.conf
+bind-key
+bind-key -n F5 run "qmlscene '>
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-09-04T03:35:26-08:00">
 </head>
@@ -87,7 +94,7 @@ navbar-dark bg-dark
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
+                    zhouyu
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
@@ -100,22 +107,30 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <ul class="simple">
+    <div>
+<div class="section" id="shortcut">
+<h2>shortcut</h2>
+<ul class="simple">
 <li><p>split: ctrl+b %</p></li>
 <li><p>scroll: ctrl+b pagedown/pageup</p></li>
 <li><p>jump to a pane: ctrl+b q number</p></li>
-<li><p>Control+b [, Control+space, Alt+w, Control+b ] --- copy paste</p></li>
+<li><p>ctrl+b [, Control+space, Alt+w, Control+b ] --- copy paste</p></li>
 </ul>
 </div>
+<div class="section" id="tmux-conf">
+<h2>.tmux.conf</h2>
+<p><a class="reference external" href="https://unix.stackexchange.com/questions/283759/tmux-how-to-bind-a-key-to-launch-shell-command">bind-key</a></p>
+<pre class="code text"><a name="rest_code_5bf7a27a0ed243eb8c8df17d1079c13a-1"></a>bind-key -n F5 run "qmlscene main.qml"
+</pre>
+</div>
+</div>
+    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
-<li class="previous">
-                <a href="../welcome-to-nikola/" rel="prev" title="Welcome to Nikola">Previous post</a>
-            </li>
-            <li class="next">
+<li class="next">
                 <a href="../rst/" rel="next" title="ReStructuredText">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2021         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>

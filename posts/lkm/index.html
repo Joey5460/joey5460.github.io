@@ -98,7 +98,7 @@ navbar-dark bg-dark
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
+                    zhouyu
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
@@ -123,38 +123,38 @@ navbar-dark bg-dark
 <li><p>sudo dnf install kernel-devel</p></li>
 </ul></dd>
 <dt>Kernel module example</dt>
-<dd><pre class="code c"><a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-1"></a><span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;       // Needed by all modules</span><span class="cp"></span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-2"></a><span class="cp">#include</span> <span class="cpf">&lt;linux/kernel.h&gt;       // KERN_INFO</span><span class="cp"></span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-3"></a>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-4"></a><span class="kt">int</span> <span class="nf">init_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-5"></a><span class="p">{</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-6"></a>     <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"== Loading s2fs module ==</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-7"></a>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-8"></a>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-9"></a><span class="p">}</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-10"></a>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-11"></a><span class="kt">void</span> <span class="nf">cleanup_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-12"></a><span class="p">{</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-13"></a>     <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"== Exit s2fs module ==</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-14"></a><span class="p">}</span>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-15"></a>
-<a name="rest_code_e7d5686d075a46e5883ec3f6baa69008-16"></a><span class="n">MODULE_LICENSE</span><span class="p">(</span><span class="s">"MIT"</span><span class="p">);</span>
+<dd><pre class="code c"><a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-1"></a><span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;</span><span class="c1">       // Needed by all modules</span><span class="cp"></span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-2"></a><span class="cp">#include</span> <span class="cpf">&lt;linux/kernel.h&gt;</span><span class="c1">       // KERN_INFO</span><span class="cp"></span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-3"></a>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-4"></a><span class="kt">int</span> <span class="nf">init_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-5"></a><span class="p">{</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-6"></a>     <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"== Loading s2fs module ==</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-7"></a>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-8"></a>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-9"></a><span class="p">}</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-10"></a>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-11"></a><span class="kt">void</span> <span class="nf">cleanup_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-12"></a><span class="p">{</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-13"></a>     <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"== Exit s2fs module ==</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-14"></a><span class="p">}</span>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-15"></a>
+<a name="rest_code_07bc50aa5ff54420a94c2f4eec041bea-16"></a><span class="n">MODULE_LICENSE</span><span class="p">(</span><span class="s">"MIT"</span><span class="p">);</span>
 </pre></dd>
 <dt>Makefile</dt>
-<dd><pre class="code makefile"><a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-1"></a><span class="nv">obj-m</span> <span class="o">+=</span> lkm_test.o
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-2"></a><span class="nv">KDIR</span> <span class="o">?=</span> /lib/modules/<span class="k">$(</span>shell uname -r<span class="k">)</span>/build
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-3"></a>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-4"></a><span class="nf">all</span><span class="o">:</span>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-5"></a>        make -C <span class="k">$(</span>KDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> modules
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-6"></a>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-7"></a><span class="nf">clean</span><span class="o">:</span>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-8"></a>        make -C <span class="k">$(</span>KDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> clean
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-9"></a>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-10"></a><span class="nf">load</span><span class="o">:</span>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-11"></a>        sudo insmod lkm_test.ko
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-12"></a>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-13"></a><span class="nf">unload</span><span class="o">:</span>
-<a name="rest_code_f4f6ddba943e4102adbff9e3b3bbeec9-14"></a>        sudo rmmod lkm_test
+<dd><pre class="code makefile"><a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-1"></a><span class="nv">obj-m</span> <span class="o">+=</span> lkm_test.o
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-2"></a><span class="nv">KDIR</span> <span class="o">?=</span> /lib/modules/<span class="k">$(</span>shell uname -r<span class="k">)</span>/build
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-3"></a>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-4"></a><span class="nf">all</span><span class="o">:</span>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-5"></a>        make -C <span class="k">$(</span>KDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> modules
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-6"></a>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-7"></a><span class="nf">clean</span><span class="o">:</span>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-8"></a>        make -C <span class="k">$(</span>KDIR<span class="k">)</span> <span class="nv">M</span><span class="o">=</span><span class="k">$(</span>PWD<span class="k">)</span> clean
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-9"></a>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-10"></a><span class="nf">load</span><span class="o">:</span>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-11"></a>        sudo insmod lkm_test.ko
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-12"></a>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-13"></a><span class="nf">unload</span><span class="o">:</span>
+<a name="rest_code_8b1e504a48464823b313ca0927dc2c3c-14"></a>        sudo rmmod lkm_test
 </pre></dd>
 <dt>Test</dt>
 <dd>
@@ -181,7 +181,7 @@ make load</pre>
                 <a href="../bash/" rel="next" title="Bash">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2021         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>

@@ -94,7 +94,7 @@ navbar-dark bg-dark
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    <a class="u-url" href="../../authors/zhouyu/">zhouyu</a>
+                    zhouyu
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
@@ -118,10 +118,10 @@ navbar-dark bg-dark
 </div>
 <div class="section" id="specify-platform">
 <h2>specify platform</h2>
-<pre class="code text"><a name="rest_code_20964d7567264327a9afab4a5c6cdd85-1"></a>linux:!android {
-<a name="rest_code_20964d7567264327a9afab4a5c6cdd85-2"></a>    message("* Using settings for Unix/Linux.")
-<a name="rest_code_20964d7567264327a9afab4a5c6cdd85-3"></a>    LIBS += -L/path/to/linux/libs
-<a name="rest_code_20964d7567264327a9afab4a5c6cdd85-4"></a>}
+<pre class="code text"><a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-1"></a>linux:!android {
+<a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-2"></a>    message("* Using settings for Unix/Linux.")
+<a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-3"></a>    LIBS += -L/path/to/linux/libs
+<a name="rest_code_4d82dc4c82474a448d5adb5cbf6da9a4-4"></a>}
 </pre>
 <p><a class="reference external" href="https://stackoverflow.com/questions/18104716/how-to-specify-libraries-only-for-android-platform-build-in-pro-file">https://stackoverflow.com/questions/18104716/how-to-specify-libraries-only-for-android-platform-build-in-pro-file</a></p>
 </div>
@@ -134,19 +134,27 @@ navbar-dark bg-dark
 <h2>Web Assembly</h2>
 <p><a class="reference external" href="https://stackoverflow.com/questions/59545455/web-assembly-typeerror-networkerror-when-attempting-to-fetch-resource">https://stackoverflow.com/questions/59545455/web-assembly-typeerror-networkerror-when-attempting-to-fetch-resource</a></p>
 <p>emrun --no_browser --port 8080 .</p>
-<pre class="code text"><a name="rest_code_e711c373536a4157891d06d0487db1e7-1"></a>Page {
-<a name="rest_code_e711c373536a4157891d06d0487db1e7-2"></a>    id: root
-<a name="rest_code_e711c373536a4157891d06d0487db1e7-3"></a>    property string inConversationWith
-<a name="rest_code_e711c373536a4157891d06d0487db1e7-4"></a>}
+<pre class="code text"><a name="rest_code_747d1d32bd994449b640e2578652a15d-1"></a>Page {
+<a name="rest_code_747d1d32bd994449b640e2578652a15d-2"></a>    id: root
+<a name="rest_code_747d1d32bd994449b640e2578652a15d-3"></a>    property string inConversationWith
+<a name="rest_code_747d1d32bd994449b640e2578652a15d-4"></a>}
 </pre>
 </div>
 <div class="section" id="debug">
 <h2>Debug</h2>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qtquick-debugging.html">https://doc.qt.io/qt-5/qtquick-debugging.html</a></p>
-<pre class="code text"><a name="rest_code_781583115550469f8cee2a860ada6f7f-1"></a>function f(a, b) {
-<a name="rest_code_781583115550469f8cee2a860ada6f7f-2"></a>  console.log("a is ", a, "b is ", b);
-<a name="rest_code_781583115550469f8cee2a860ada6f7f-3"></a>}
+<pre class="code text"><a name="rest_code_b65c0ef07a6b463b835ba06985a1a36d-1"></a>function f(a, b) {
+<a name="rest_code_b65c0ef07a6b463b835ba06985a1a36d-2"></a>  console.log("a is ", a, "b is ", b);
+<a name="rest_code_b65c0ef07a6b463b835ba06985a1a36d-3"></a>}
 </pre>
+</div>
+<div class="section" id="qmldir">
+<h2>qmldir</h2>
+<pre class="code text"><a name="rest_code_54c61524d42d459ea34a88fcf7e1c746-1"></a>module example.io #(uri/path)
+<a name="rest_code_54c61524d42d459ea34a88fcf7e1c746-2"></a>plugin plugin #(libplugin)
+</pre>
+<p>qmlRegisterType&lt;cppclass&gt;&lt;uri,1,0,"qmlcppclass"&gt;</p>
+<p>import module(uri) 1.0</p>
 </div>
 <div class="section" id="connect">
 <h2>connect</h2>
@@ -155,12 +163,112 @@ navbar-dark bg-dark
 </div>
 <div class="section" id="element">
 <h2>Element</h2>
-<p>AppliationWindow
-Page
-Header
-Label</p>
-<p>anchors.fill: parent
-layout</p>
+<p>AppliationWindow/item/page/rectangle</p>
+<p>Item</p>
+<ul class="simple">
+<li><p>width</p></li>
+<li><p>height</p></li>
+<li><p>visible</p></li>
+</ul>
+<p>Page</p>
+<ul class="simple">
+<li><p>header</p></li>
+</ul>
+<p>Label</p>
+<ul class="simple">
+<li><p>text</p></li>
+</ul>
+<p>StactView</p>
+<p>ToolBar</p>
+<p>Drawer</p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qml-qtquick-listview.html">ListView</a></p>
+<blockquote>
+<ul class="simple">
+<li><p>model: ListModel/QAbastractModel</p></li>
+<li><p>delegate: ItemDelegate The index is exposed as an accessible index property.</p></li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="variant">
+<h2>Variant</h2>
+<p>property string currentContact : ""</p>
+</div>
+<div class="section" id="property">
+<h2>Property</h2>
+<p>write read notify</p>
+<pre class="code text"><a name="rest_code_d16817afb9434521b2a372a47da9f908-1"></a>model: SqlChatModel{
+<a name="rest_code_d16817afb9434521b2a372a47da9f908-2"></a>    recipient: inConversationWith
+<a name="rest_code_d16817afb9434521b2a372a47da9f908-3"></a>}
+</pre>
+<p>func: eg model.sendMessage</p>
+</div>
+<div class="section" id="layout">
+<h2>Layout</h2>
+<ul class="simple">
+<li><p>anchors.fill: parent</p></li>
+<li><p>anchors.centerIn: parent</p></li>
+<li><p>Layout.fillWidth</p></li>
+<li><p>layout</p></li>
+</ul>
+<p>Parent is null in ListView delegate after upgrade to Qt 5.15</p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/63767669/parent-is-null-in-listview-delegate-after-upgrade-to-qt-5-15">https://stackoverflow.com/questions/63767669/parent-is-null-in-listview-delegate-after-upgrade-to-qt-5-15</a></p>
+</div>
+<div class="section" id="componet">
+<h2>Componet</h2>
+<p><a class="reference external" href="https://doc.qt.io/archives/qt-4.8/qml-component.html">https://doc.qt.io/archives/qt-4.8/qml-component.html</a></p>
+<p>Component.onCompleted: {}
+Component.onDestruction:{}</p>
+<pre class="code text"><a name="rest_code_4c1af141345249f7a1041d0892153725-1"></a>Loader {
+<a name="rest_code_4c1af141345249f7a1041d0892153725-2"></a>        id: dialLoader
+<a name="rest_code_4c1af141345249f7a1041d0892153725-3"></a>
+<a name="rest_code_4c1af141345249f7a1041d0892153725-4"></a>        anchors.left: parent.left
+<a name="rest_code_4c1af141345249f7a1041d0892153725-5"></a>        anchors.right: parent.right
+<a name="rest_code_4c1af141345249f7a1041d0892153725-6"></a>        anchors.top: parent.top
+<a name="rest_code_4c1af141345249f7a1041d0892153725-7"></a>        anchors.bottom: analogButton.top
+<a name="rest_code_4c1af141345249f7a1041d0892153725-8"></a>
+<a name="rest_code_4c1af141345249f7a1041d0892153725-9"></a>        onLoaded: {
+<a name="rest_code_4c1af141345249f7a1041d0892153725-10"></a>            binder.target = dialLoader.item;
+<a name="rest_code_4c1af141345249f7a1041d0892153725-11"></a>        }
+<a name="rest_code_4c1af141345249f7a1041d0892153725-12"></a>}
+<a name="rest_code_4c1af141345249f7a1041d0892153725-13"></a>
+<a name="rest_code_4c1af141345249f7a1041d0892153725-14"></a>Binding {
+<a name="rest_code_4c1af141345249f7a1041d0892153725-15"></a>        id: binder
+<a name="rest_code_4c1af141345249f7a1041d0892153725-16"></a>
+<a name="rest_code_4c1af141345249f7a1041d0892153725-17"></a>        property: "speed"
+<a name="rest_code_4c1af141345249f7a1041d0892153725-18"></a>        value: speed
+<a name="rest_code_4c1af141345249f7a1041d0892153725-19"></a>}
+</pre>
+</div>
+<div class="section" id="signals-call-back">
+<h2>Signals(call back)</h2>
+<p><a class="reference external" href="https://doc.qt.io/archives/qt-4.8/qmlevents.html">https://doc.qt.io/archives/qt-4.8/qmlevents.html</a></p>
+<p>id.singalFunc.connect(slotFunc)</p>
+<pre class="code text"><a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-1"></a>Rectangle {
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-2"></a>     id: relay
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-3"></a>
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-4"></a>     signal send(string person, string notice)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-5"></a>     onSend: console.log("Send signal to: " + person + ", " + notice)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-6"></a>
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-7"></a>     Component.onCompleted: {
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-8"></a>         relay.send.connect(sendToPost)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-9"></a>         relay.send.connect(sendToTelegraph)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-10"></a>         relay.send.connect(sendToEmail)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-11"></a>         relay.send("Tom", "Happy Birthday")
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-12"></a>     }
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-13"></a>
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-14"></a>     function sendToPost(person, notice) {
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-15"></a>         console.log("Sending to post: " + person + ", " + notice)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-16"></a>     }
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-17"></a>     function sendToTelegraph(person, notice) {
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-18"></a>         console.log("Sending to telegraph: " + person + ", " + notice)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-19"></a>     }
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-20"></a>     function sendToEmail(person, notice) {
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-21"></a>         console.log("Sending to email: " + person + ", " + notice)
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-22"></a>     }
+<a name="rest_code_ea1016789fd54b6ea5a0032718e9b61b-23"></a> }
+</pre>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qml-qtqml-connections.html#details">https://doc.qt.io/qt-5/qml-qtqml-connections.html#details</a></p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qtqml-syntax-signals.html">https://doc.qt.io/qt-5/qtqml-syntax-signals.html</a></p>
 </div>
 </div>
     </div>
@@ -172,7 +280,7 @@ layout</p>
                 <a href="../qdoctut/" rel="next" title="qdoc note">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2021         <a href="mailto:zhouyu5460@gmail.com">zhouyu</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>
